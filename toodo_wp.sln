@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppada", "toodo_wp\ppada.csproj", "{8E58D3C6-1344-40DF-B264-61A35AE60907}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppada", "ppada\ppada.csproj", "{8E58D3C6-1344-40DF-B264-61A35AE60907}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
