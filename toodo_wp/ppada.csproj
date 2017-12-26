@@ -7,8 +7,8 @@
     <ProjectGuid>{8E58D3C6-1344-40DF-B264-61A35AE60907}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>toodo_wp</RootNamespace>
-    <AssemblyName>toodo_wp</AssemblyName>
+    <RootNamespace>ppada</RootNamespace>
+    <AssemblyName>ppada</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
