@@ -1,0 +1,4 @@
+MainPackage=D:\overmars\projects\SandShark Studios\toodo_wp\toodo_wp\bin\ARM\Release\toodo_wp_1.1.0.4_ARM.appx
+SymbolPackage=D:\overmars\projects\SandShark Studios\toodo_wp\toodo_wp\AppPackages\toodo_wp_1.1.0.4_Test\toodo_wp_1.1.0.4_ARM.appxsym
+ResourcePack=D:\overmars\projects\SandShark Studios\toodo_wp\toodo_wp\bin\ARM\Release\toodo_wp_1.1.0.4_scale-100.appx
+ResourcePack=D:\overmars\projects\SandShark Studios\toodo_wp\toodo_wp\bin\ARM\Release\toodo_wp_1.1.0.4_scale-140.appx

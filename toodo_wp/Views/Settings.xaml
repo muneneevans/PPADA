@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="toodo_wp.Views.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:toodo_wp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot>
+            <PivotItem Header="Manage">
+                <ScrollViewer>
+                    <StackPanel>
+                        <StackPanel x:Name="TasksStackPanel">
+                            <TextBlock Text="Tasks" Style="{StaticResource NormalTextBlockStyle}"/>
+                            <TextBlock Style="{StaticResource SettingsDescriptionTextBlock}"
+                                Text="You can delete all Tasks here. For information on deleteing tasks, swipe right"/>
+                            <Button x:Name="DeleteAllTasksButton" Content="Delete All Tasks" Style="{StaticResource NormalButtonStyle}"  Click="DeleteAllTasksButton_Click"></Button>
+                        </StackPanel>
+                        <StackPanel >
+                            <TextBlock Style="{StaticResource NormalTextBlockStyle}" Text="Routines"/>
+                            <TextBlock Style="{StaticResource SettingsDescriptionTextBlock}"
+                                Text="You can delete all Routines here. For information on managing tasks, swipe right"/>
+                            <Button x:Name="DeleteAllRoutinesButton" Content="Delete All Routines" Click="DeleteAllRoutinesButton_Click" Style="{StaticResource NormalButtonStyle}"></Button>
+                        </StackPanel>
+                        <StackPanel x:Name="FoldersStackPanel" >
+                            <TextBlock Style="{StaticResource NormalTextBlockStyle}" Text="Folders"/>
+                            <TextBlock Style="{StaticResource SettingsDescriptionTextBlock}"
+                                Text="You can delete all Folders here. For information on managing Tasks, swipe right"/>
+                            <Button x:Name="DeleteAllFoldersButton"  Content="Delete All Folders" Click="DeleteAllFoldersButton_Click" Style="{StaticResource NormalButtonStyle}"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem Header="About">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Style="{StaticResource NormalTextBlockStyle}" Text="Version:"/>
+                    <TextBlock Grid.Row="1" FontSize="28" Text="1.0.0.0"/>
+                    <TextBlock Grid.Row="3" FontSize="18" Text="Made By Arana Developers"/>                    
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
