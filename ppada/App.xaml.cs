@@ -40,7 +40,7 @@ namespace ppada
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public static ViewModel vm = new ViewModel();
-        public static string DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "toodo.sqlite"));//DataBase Name
+        //public static string DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "ppada.sqlite"));//DataBase Name
 
         public App()
         {
@@ -48,14 +48,14 @@ namespace ppada
             this.Suspending += this.OnSuspending;
 
             //Windows.UI.ViewManagement.StatusBar.GetForCurrentView().BackgroundColor = (Windows.UI.Colors.Cyan);
-            if (!CheckFileExists("toodo.sqlite").Result)
-            {
-                using (var db = new SQLiteConnection(DBPath))
-                {
-                    db.CreateTable<task>();
+            //if (!CheckFileExists("ppada.sqlite").Result)
+            //{
+            //    using (var db = new SQLiteConnection(DBPath))
+            //    {
+            //        db.CreateTable<task>();
 
-                }
-            }
+            //    }
+            //}
             //DBPath =Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "toodo.sqlite"));//DataBase Name
 
         }

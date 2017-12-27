@@ -9,7 +9,7 @@
 
 
 
-namespace toodo_wp
+namespace ppada
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
@@ -125,102 +125,102 @@ namespace ppada.ppada_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[47];
-            _typeNameTable[0] = "toodo_wp.tile.WideUserControl";
+            _typeNameTable[0] = "ppada.tile.WideUserControl";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "toodo_wp.Views.BoolToCheckConverter";
+            _typeNameTable[2] = "ppada.Views.BoolToCheckConverter";
             _typeNameTable[3] = "Object";
-            _typeNameTable[4] = "toodo_wp.Views.DesignTimeViewModel";
-            _typeNameTable[5] = "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.routine>";
-            _typeNameTable[6] = "System.Collections.ObjectModel.Collection`1<toodo_wp.Models.routine>";
-            _typeNameTable[7] = "toodo_wp.Models.routine";
+            _typeNameTable[4] = "ppada.Views.DesignTimeViewModel";
+            _typeNameTable[5] = "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.routine>";
+            _typeNameTable[6] = "System.Collections.ObjectModel.Collection`1<ppada.Models.routine>";
+            _typeNameTable[7] = "ppada.Models.routine";
             _typeNameTable[8] = "Int32";
             _typeNameTable[9] = "String";
             _typeNameTable[10] = "System.DateTime";
             _typeNameTable[11] = "System.ValueType";
             _typeNameTable[12] = "Boolean";
-            _typeNameTable[13] = "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.task>";
-            _typeNameTable[14] = "System.Collections.ObjectModel.Collection`1<toodo_wp.Models.task>";
-            _typeNameTable[15] = "toodo_wp.Models.task";
-            _typeNameTable[16] = "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.folder>";
-            _typeNameTable[17] = "System.Collections.ObjectModel.Collection`1<toodo_wp.Models.folder>";
-            _typeNameTable[18] = "toodo_wp.Models.folder";
+            _typeNameTable[13] = "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.task>";
+            _typeNameTable[14] = "System.Collections.ObjectModel.Collection`1<ppada.Models.task>";
+            _typeNameTable[15] = "ppada.Models.task";
+            _typeNameTable[16] = "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.folder>";
+            _typeNameTable[17] = "System.Collections.ObjectModel.Collection`1<ppada.Models.folder>";
+            _typeNameTable[18] = "ppada.Models.folder";
             _typeNameTable[19] = "UInt32";
-            _typeNameTable[20] = "toodo_wp.Views.DateToTextConverter";
-            _typeNameTable[21] = "toodo_wp.Views.DateToColorConverter";
-            _typeNameTable[22] = "toodo_wp.Views.ListToPendingItemsConverter";
-            _typeNameTable[23] = "toodo_wp.Views.ListToCompletedItemsConverter";
-            _typeNameTable[24] = "toodo_wp.Views.ListToRoutineItemsConverter";
-            _typeNameTable[25] = "toodo_wp.Views.FolderToHeader";
-            _typeNameTable[26] = "toodo_wp.Views.BooleanToIconConverter";
-            _typeNameTable[27] = "toodo_wp.Views.ColorItemToColorConverter";
-            _typeNameTable[28] = "toodo_wp.Views.FolderItemPage";
+            _typeNameTable[20] = "ppada.Views.DateToTextConverter";
+            _typeNameTable[21] = "ppada.Views.DateToColorConverter";
+            _typeNameTable[22] = "ppada.Views.ListToPendingItemsConverter";
+            _typeNameTable[23] = "ppada.Views.ListToCompletedItemsConverter";
+            _typeNameTable[24] = "ppada.Views.ListToRoutineItemsConverter";
+            _typeNameTable[25] = "ppada.Views.FolderToHeader";
+            _typeNameTable[26] = "ppada.Views.BooleanToIconConverter";
+            _typeNameTable[27] = "ppada.Views.ColorItemToColorConverter";
+            _typeNameTable[28] = "ppada.Views.FolderItemPage";
             _typeNameTable[29] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[30] = "toodo_wp.Common.NavigationHelper";
+            _typeNameTable[30] = "ppada.Common.NavigationHelper";
             _typeNameTable[31] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[32] = "toodo_wp.Common.ObservableDictionary";
-            _typeNameTable[33] = "toodo_wp.Views.FolderToColorConverter";
-            _typeNameTable[34] = "toodo_wp.Views.ListToVisibilityConverter";
-            _typeNameTable[35] = "toodo_wp.Views.ListToInvertedVisibilityConverter";
-            _typeNameTable[36] = "toodo_wp.Views.RoutinesListToVisibilityConverter";
-            _typeNameTable[37] = "toodo_wp.Views.RoutinesListToInvertedVisibilityConverter";
-            _typeNameTable[38] = "toodo_wp.Views.Home";
-            _typeNameTable[39] = "toodo_wp.Views.SelectedFolderConverter";
-            _typeNameTable[40] = "toodo_wp.Views.ItemPage";
-            _typeNameTable[41] = "toodo_wp.Views.NewFolder";
-            _typeNameTable[42] = "toodo_wp.Views.NewRoutine";
-            _typeNameTable[43] = "toodo_wp.Views.CheckBoxToEnableConverter";
-            _typeNameTable[44] = "toodo_wp.Views.NewTask";
-            _typeNameTable[45] = "toodo_wp.Views.RoutineItemPage";
-            _typeNameTable[46] = "toodo_wp.Views.Settings";
+            _typeNameTable[32] = "ppada.Common.ObservableDictionary";
+            _typeNameTable[33] = "ppada.Views.FolderToColorConverter";
+            _typeNameTable[34] = "ppada.Views.ListToVisibilityConverter";
+            _typeNameTable[35] = "ppada.Views.ListToInvertedVisibilityConverter";
+            _typeNameTable[36] = "ppada.Views.RoutinesListToVisibilityConverter";
+            _typeNameTable[37] = "ppada.Views.RoutinesListToInvertedVisibilityConverter";
+            _typeNameTable[38] = "ppada.Views.Home";
+            _typeNameTable[39] = "ppada.Views.SelectedFolderConverter";
+            _typeNameTable[40] = "ppada.Views.ItemPage";
+            _typeNameTable[41] = "ppada.Views.NewFolder";
+            _typeNameTable[42] = "ppada.Views.NewRoutine";
+            _typeNameTable[43] = "ppada.Views.CheckBoxToEnableConverter";
+            _typeNameTable[44] = "ppada.Views.NewTask";
+            _typeNameTable[45] = "ppada.Views.RoutineItemPage";
+            _typeNameTable[46] = "ppada.Views.Settings";
 
             _typeTable = new global::System.Type[47];
-            _typeTable[0] = typeof(global::toodo_wp.tile.WideUserControl);
+            _typeTable[0] = typeof(global::ppada.tile.WideUserControl);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::toodo_wp.Views.BoolToCheckConverter);
+            _typeTable[2] = typeof(global::ppada.Views.BoolToCheckConverter);
             _typeTable[3] = typeof(global::System.Object);
-            _typeTable[4] = typeof(global::toodo_wp.Views.DesignTimeViewModel);
-            _typeTable[5] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.routine>);
-            _typeTable[6] = typeof(global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.routine>);
-            _typeTable[7] = typeof(global::toodo_wp.Models.routine);
+            _typeTable[4] = typeof(global::ppada.Views.DesignTimeViewModel);
+            _typeTable[5] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.routine>);
+            _typeTable[6] = typeof(global::System.Collections.ObjectModel.Collection<global::ppada.Models.routine>);
+            _typeTable[7] = typeof(global::ppada.Models.routine);
             _typeTable[8] = typeof(global::System.Int32);
             _typeTable[9] = typeof(global::System.String);
             _typeTable[10] = typeof(global::System.DateTime);
             _typeTable[11] = typeof(global::System.ValueType);
             _typeTable[12] = typeof(global::System.Boolean);
-            _typeTable[13] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.task>);
-            _typeTable[14] = typeof(global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.task>);
-            _typeTable[15] = typeof(global::toodo_wp.Models.task);
-            _typeTable[16] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.folder>);
-            _typeTable[17] = typeof(global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.folder>);
-            _typeTable[18] = typeof(global::toodo_wp.Models.folder);
+            _typeTable[13] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.task>);
+            _typeTable[14] = typeof(global::System.Collections.ObjectModel.Collection<global::ppada.Models.task>);
+            _typeTable[15] = typeof(global::ppada.Models.task);
+            _typeTable[16] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.folder>);
+            _typeTable[17] = typeof(global::System.Collections.ObjectModel.Collection<global::ppada.Models.folder>);
+            _typeTable[18] = typeof(global::ppada.Models.folder);
             _typeTable[19] = typeof(global::System.UInt32);
-            _typeTable[20] = typeof(global::toodo_wp.Views.DateToTextConverter);
-            _typeTable[21] = typeof(global::toodo_wp.Views.DateToColorConverter);
-            _typeTable[22] = typeof(global::toodo_wp.Views.ListToPendingItemsConverter);
-            _typeTable[23] = typeof(global::toodo_wp.Views.ListToCompletedItemsConverter);
-            _typeTable[24] = typeof(global::toodo_wp.Views.ListToRoutineItemsConverter);
-            _typeTable[25] = typeof(global::toodo_wp.Views.FolderToHeader);
-            _typeTable[26] = typeof(global::toodo_wp.Views.BooleanToIconConverter);
-            _typeTable[27] = typeof(global::toodo_wp.Views.ColorItemToColorConverter);
-            _typeTable[28] = typeof(global::toodo_wp.Views.FolderItemPage);
+            _typeTable[20] = typeof(global::ppada.Views.DateToTextConverter);
+            _typeTable[21] = typeof(global::ppada.Views.DateToColorConverter);
+            _typeTable[22] = typeof(global::ppada.Views.ListToPendingItemsConverter);
+            _typeTable[23] = typeof(global::ppada.Views.ListToCompletedItemsConverter);
+            _typeTable[24] = typeof(global::ppada.Views.ListToRoutineItemsConverter);
+            _typeTable[25] = typeof(global::ppada.Views.FolderToHeader);
+            _typeTable[26] = typeof(global::ppada.Views.BooleanToIconConverter);
+            _typeTable[27] = typeof(global::ppada.Views.ColorItemToColorConverter);
+            _typeTable[28] = typeof(global::ppada.Views.FolderItemPage);
             _typeTable[29] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[30] = typeof(global::toodo_wp.Common.NavigationHelper);
+            _typeTable[30] = typeof(global::ppada.Common.NavigationHelper);
             _typeTable[31] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[32] = typeof(global::toodo_wp.Common.ObservableDictionary);
-            _typeTable[33] = typeof(global::toodo_wp.Views.FolderToColorConverter);
-            _typeTable[34] = typeof(global::toodo_wp.Views.ListToVisibilityConverter);
-            _typeTable[35] = typeof(global::toodo_wp.Views.ListToInvertedVisibilityConverter);
-            _typeTable[36] = typeof(global::toodo_wp.Views.RoutinesListToVisibilityConverter);
-            _typeTable[37] = typeof(global::toodo_wp.Views.RoutinesListToInvertedVisibilityConverter);
-            _typeTable[38] = typeof(global::toodo_wp.Views.Home);
-            _typeTable[39] = typeof(global::toodo_wp.Views.SelectedFolderConverter);
-            _typeTable[40] = typeof(global::toodo_wp.Views.ItemPage);
-            _typeTable[41] = typeof(global::toodo_wp.Views.NewFolder);
-            _typeTable[42] = typeof(global::toodo_wp.Views.NewRoutine);
-            _typeTable[43] = typeof(global::toodo_wp.Views.CheckBoxToEnableConverter);
-            _typeTable[44] = typeof(global::toodo_wp.Views.NewTask);
-            _typeTable[45] = typeof(global::toodo_wp.Views.RoutineItemPage);
-            _typeTable[46] = typeof(global::toodo_wp.Views.Settings);
+            _typeTable[32] = typeof(global::ppada.Common.ObservableDictionary);
+            _typeTable[33] = typeof(global::ppada.Views.FolderToColorConverter);
+            _typeTable[34] = typeof(global::ppada.Views.ListToVisibilityConverter);
+            _typeTable[35] = typeof(global::ppada.Views.ListToInvertedVisibilityConverter);
+            _typeTable[36] = typeof(global::ppada.Views.RoutinesListToVisibilityConverter);
+            _typeTable[37] = typeof(global::ppada.Views.RoutinesListToInvertedVisibilityConverter);
+            _typeTable[38] = typeof(global::ppada.Views.Home);
+            _typeTable[39] = typeof(global::ppada.Views.SelectedFolderConverter);
+            _typeTable[40] = typeof(global::ppada.Views.ItemPage);
+            _typeTable[41] = typeof(global::ppada.Views.NewFolder);
+            _typeTable[42] = typeof(global::ppada.Views.NewRoutine);
+            _typeTable[43] = typeof(global::ppada.Views.CheckBoxToEnableConverter);
+            _typeTable[44] = typeof(global::ppada.Views.NewTask);
+            _typeTable[45] = typeof(global::ppada.Views.RoutineItemPage);
+            _typeTable[46] = typeof(global::ppada.Views.Settings);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -255,76 +255,76 @@ namespace ppada.ppada_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_WideUserControl() { return new global::toodo_wp.tile.WideUserControl(); }
-        private object Activate_2_BoolToCheckConverter() { return new global::toodo_wp.Views.BoolToCheckConverter(); }
-        private object Activate_4_DesignTimeViewModel() { return new global::toodo_wp.Views.DesignTimeViewModel(); }
-        private object Activate_5_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.routine>(); }
-        private object Activate_6_Collection() { return new global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.routine>(); }
-        private object Activate_7_routine() { return new global::toodo_wp.Models.routine(); }
-        private object Activate_13_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.task>(); }
-        private object Activate_14_Collection() { return new global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.task>(); }
-        private object Activate_15_task() { return new global::toodo_wp.Models.task(); }
-        private object Activate_16_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.folder>(); }
-        private object Activate_17_Collection() { return new global::System.Collections.ObjectModel.Collection<global::toodo_wp.Models.folder>(); }
-        private object Activate_18_folder() { return new global::toodo_wp.Models.folder(); }
-        private object Activate_20_DateToTextConverter() { return new global::toodo_wp.Views.DateToTextConverter(); }
-        private object Activate_21_DateToColorConverter() { return new global::toodo_wp.Views.DateToColorConverter(); }
-        private object Activate_22_ListToPendingItemsConverter() { return new global::toodo_wp.Views.ListToPendingItemsConverter(); }
-        private object Activate_23_ListToCompletedItemsConverter() { return new global::toodo_wp.Views.ListToCompletedItemsConverter(); }
-        private object Activate_24_ListToRoutineItemsConverter() { return new global::toodo_wp.Views.ListToRoutineItemsConverter(); }
-        private object Activate_25_FolderToHeader() { return new global::toodo_wp.Views.FolderToHeader(); }
-        private object Activate_26_BooleanToIconConverter() { return new global::toodo_wp.Views.BooleanToIconConverter(); }
-        private object Activate_27_ColorItemToColorConverter() { return new global::toodo_wp.Views.ColorItemToColorConverter(); }
-        private object Activate_28_FolderItemPage() { return new global::toodo_wp.Views.FolderItemPage(); }
-        private object Activate_32_ObservableDictionary() { return new global::toodo_wp.Common.ObservableDictionary(); }
-        private object Activate_33_FolderToColorConverter() { return new global::toodo_wp.Views.FolderToColorConverter(); }
-        private object Activate_34_ListToVisibilityConverter() { return new global::toodo_wp.Views.ListToVisibilityConverter(); }
-        private object Activate_35_ListToInvertedVisibilityConverter() { return new global::toodo_wp.Views.ListToInvertedVisibilityConverter(); }
-        private object Activate_36_RoutinesListToVisibilityConverter() { return new global::toodo_wp.Views.RoutinesListToVisibilityConverter(); }
-        private object Activate_37_RoutinesListToInvertedVisibilityConverter() { return new global::toodo_wp.Views.RoutinesListToInvertedVisibilityConverter(); }
-        private object Activate_38_Home() { return new global::toodo_wp.Views.Home(); }
-        private object Activate_39_SelectedFolderConverter() { return new global::toodo_wp.Views.SelectedFolderConverter(); }
-        private object Activate_40_ItemPage() { return new global::toodo_wp.Views.ItemPage(); }
-        private object Activate_41_NewFolder() { return new global::toodo_wp.Views.NewFolder(); }
-        private object Activate_42_NewRoutine() { return new global::toodo_wp.Views.NewRoutine(); }
-        private object Activate_43_CheckBoxToEnableConverter() { return new global::toodo_wp.Views.CheckBoxToEnableConverter(); }
-        private object Activate_44_NewTask() { return new global::toodo_wp.Views.NewTask(); }
-        private object Activate_45_RoutineItemPage() { return new global::toodo_wp.Views.RoutineItemPage(); }
-        private object Activate_46_Settings() { return new global::toodo_wp.Views.Settings(); }
+        private object Activate_0_WideUserControl() { return new global::ppada.tile.WideUserControl(); }
+        private object Activate_2_BoolToCheckConverter() { return new global::ppada.Views.BoolToCheckConverter(); }
+        private object Activate_4_DesignTimeViewModel() { return new global::ppada.Views.DesignTimeViewModel(); }
+        private object Activate_5_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.routine>(); }
+        private object Activate_6_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ppada.Models.routine>(); }
+        private object Activate_7_routine() { return new global::ppada.Models.routine(); }
+        private object Activate_13_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.task>(); }
+        private object Activate_14_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ppada.Models.task>(); }
+        private object Activate_15_task() { return new global::ppada.Models.task(); }
+        private object Activate_16_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.folder>(); }
+        private object Activate_17_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ppada.Models.folder>(); }
+        private object Activate_18_folder() { return new global::ppada.Models.folder(); }
+        private object Activate_20_DateToTextConverter() { return new global::ppada.Views.DateToTextConverter(); }
+        private object Activate_21_DateToColorConverter() { return new global::ppada.Views.DateToColorConverter(); }
+        private object Activate_22_ListToPendingItemsConverter() { return new global::ppada.Views.ListToPendingItemsConverter(); }
+        private object Activate_23_ListToCompletedItemsConverter() { return new global::ppada.Views.ListToCompletedItemsConverter(); }
+        private object Activate_24_ListToRoutineItemsConverter() { return new global::ppada.Views.ListToRoutineItemsConverter(); }
+        private object Activate_25_FolderToHeader() { return new global::ppada.Views.FolderToHeader(); }
+        private object Activate_26_BooleanToIconConverter() { return new global::ppada.Views.BooleanToIconConverter(); }
+        private object Activate_27_ColorItemToColorConverter() { return new global::ppada.Views.ColorItemToColorConverter(); }
+        private object Activate_28_FolderItemPage() { return new global::ppada.Views.FolderItemPage(); }
+        private object Activate_32_ObservableDictionary() { return new global::ppada.Common.ObservableDictionary(); }
+        private object Activate_33_FolderToColorConverter() { return new global::ppada.Views.FolderToColorConverter(); }
+        private object Activate_34_ListToVisibilityConverter() { return new global::ppada.Views.ListToVisibilityConverter(); }
+        private object Activate_35_ListToInvertedVisibilityConverter() { return new global::ppada.Views.ListToInvertedVisibilityConverter(); }
+        private object Activate_36_RoutinesListToVisibilityConverter() { return new global::ppada.Views.RoutinesListToVisibilityConverter(); }
+        private object Activate_37_RoutinesListToInvertedVisibilityConverter() { return new global::ppada.Views.RoutinesListToInvertedVisibilityConverter(); }
+        private object Activate_38_Home() { return new global::ppada.Views.Home(); }
+        private object Activate_39_SelectedFolderConverter() { return new global::ppada.Views.SelectedFolderConverter(); }
+        private object Activate_40_ItemPage() { return new global::ppada.Views.ItemPage(); }
+        private object Activate_41_NewFolder() { return new global::ppada.Views.NewFolder(); }
+        private object Activate_42_NewRoutine() { return new global::ppada.Views.NewRoutine(); }
+        private object Activate_43_CheckBoxToEnableConverter() { return new global::ppada.Views.CheckBoxToEnableConverter(); }
+        private object Activate_44_NewTask() { return new global::ppada.Views.NewTask(); }
+        private object Activate_45_RoutineItemPage() { return new global::ppada.Views.RoutineItemPage(); }
+        private object Activate_46_Settings() { return new global::ppada.Views.Settings(); }
         private void VectorAdd_5_ObservableCollection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.routine>)instance;
-            var newItem = (global::toodo_wp.Models.routine)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.routine>)instance;
+            var newItem = (global::ppada.Models.routine)item;
             collection.Add(newItem);
         }
         private void VectorAdd_6_Collection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.routine>)instance;
-            var newItem = (global::toodo_wp.Models.routine)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.routine>)instance;
+            var newItem = (global::ppada.Models.routine)item;
             collection.Add(newItem);
         }
         private void VectorAdd_13_ObservableCollection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.task>)instance;
-            var newItem = (global::toodo_wp.Models.task)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.task>)instance;
+            var newItem = (global::ppada.Models.task)item;
             collection.Add(newItem);
         }
         private void VectorAdd_14_Collection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.task>)instance;
-            var newItem = (global::toodo_wp.Models.task)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.task>)instance;
+            var newItem = (global::ppada.Models.task)item;
             collection.Add(newItem);
         }
         private void VectorAdd_16_ObservableCollection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.folder>)instance;
-            var newItem = (global::toodo_wp.Models.folder)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.folder>)instance;
+            var newItem = (global::ppada.Models.folder)item;
             collection.Add(newItem);
         }
         private void VectorAdd_17_Collection(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::toodo_wp.Models.folder>)instance;
-            var newItem = (global::toodo_wp.Models.folder)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::ppada.Models.folder>)instance;
+            var newItem = (global::ppada.Models.folder)item;
             collection.Add(newItem);
         }
         private void MapAdd_32_ObservableDictionary(object instance, object key, object item)
@@ -345,7 +345,7 @@ namespace ppada.ppada_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  toodo_wp.tile.WideUserControl
+            case 0:   //  ppada.tile.WideUserControl
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_WideUserControl;
                 userType.SetIsLocalType();
@@ -356,7 +356,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  toodo_wp.Views.BoolToCheckConverter
+            case 2:   //  ppada.Views.BoolToCheckConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_2_BoolToCheckConverter;
                 userType.SetIsLocalType();
@@ -367,7 +367,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  toodo_wp.Views.DesignTimeViewModel
+            case 4:   //  ppada.Views.DesignTimeViewModel
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_4_DesignTimeViewModel;
                 userType.AddMemberName("AllRoutines");
@@ -377,21 +377,21 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.routine>
-                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<toodo_wp.Models.routine>"));
+            case 5:   //  System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.routine>
+                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<ppada.Models.routine>"));
                 userType.CollectionAdd = VectorAdd_5_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 6:   //  System.Collections.ObjectModel.Collection`1<toodo_wp.Models.routine>
+            case 6:   //  System.Collections.ObjectModel.Collection`1<ppada.Models.routine>
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_6_Collection;
                 userType.CollectionAdd = VectorAdd_6_Collection;
                 xamlType = userType;
                 break;
 
-            case 7:   //  toodo_wp.Models.routine
+            case 7:   //  ppada.Models.routine
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_7_routine;
                 userType.AddMemberName("routine_id");
@@ -429,21 +429,21 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.task>
-                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<toodo_wp.Models.task>"));
+            case 13:   //  System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.task>
+                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<ppada.Models.task>"));
                 userType.CollectionAdd = VectorAdd_13_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 14:   //  System.Collections.ObjectModel.Collection`1<toodo_wp.Models.task>
+            case 14:   //  System.Collections.ObjectModel.Collection`1<ppada.Models.task>
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_14_Collection;
                 userType.CollectionAdd = VectorAdd_14_Collection;
                 xamlType = userType;
                 break;
 
-            case 15:   //  toodo_wp.Models.task
+            case 15:   //  ppada.Models.task
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_15_task;
                 userType.AddMemberName("task_id");
@@ -457,21 +457,21 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.folder>
-                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<toodo_wp.Models.folder>"));
+            case 16:   //  System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.folder>
+                userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<ppada.Models.folder>"));
                 userType.CollectionAdd = VectorAdd_16_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 17:   //  System.Collections.ObjectModel.Collection`1<toodo_wp.Models.folder>
+            case 17:   //  System.Collections.ObjectModel.Collection`1<ppada.Models.folder>
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_17_Collection;
                 userType.CollectionAdd = VectorAdd_17_Collection;
                 xamlType = userType;
                 break;
 
-            case 18:   //  toodo_wp.Models.folder
+            case 18:   //  ppada.Models.folder
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_18_folder;
                 userType.AddMemberName("folder_id");
@@ -485,63 +485,63 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  toodo_wp.Views.DateToTextConverter
+            case 20:   //  ppada.Views.DateToTextConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_20_DateToTextConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  toodo_wp.Views.DateToColorConverter
+            case 21:   //  ppada.Views.DateToColorConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_21_DateToColorConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  toodo_wp.Views.ListToPendingItemsConverter
+            case 22:   //  ppada.Views.ListToPendingItemsConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_22_ListToPendingItemsConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 23:   //  toodo_wp.Views.ListToCompletedItemsConverter
+            case 23:   //  ppada.Views.ListToCompletedItemsConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_23_ListToCompletedItemsConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  toodo_wp.Views.ListToRoutineItemsConverter
+            case 24:   //  ppada.Views.ListToRoutineItemsConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_24_ListToRoutineItemsConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  toodo_wp.Views.FolderToHeader
+            case 25:   //  ppada.Views.FolderToHeader
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_25_FolderToHeader;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  toodo_wp.Views.BooleanToIconConverter
+            case 26:   //  ppada.Views.BooleanToIconConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_26_BooleanToIconConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  toodo_wp.Views.ColorItemToColorConverter
+            case 27:   //  ppada.Views.ColorItemToColorConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_27_ColorItemToColorConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 28:   //  toodo_wp.Views.FolderItemPage
+            case 28:   //  ppada.Views.FolderItemPage
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_28_FolderItemPage;
                 userType.AddMemberName("NavigationHelper");
@@ -554,7 +554,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  toodo_wp.Common.NavigationHelper
+            case 30:   //  ppada.Common.NavigationHelper
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
@@ -565,7 +565,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = new global::ppada.ppada_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 32:   //  toodo_wp.Common.ObservableDictionary
+            case 32:   //  ppada.Common.ObservableDictionary
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.DictionaryAdd = MapAdd_32_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
@@ -573,56 +573,56 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 33:   //  toodo_wp.Views.FolderToColorConverter
+            case 33:   //  ppada.Views.FolderToColorConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_33_FolderToColorConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 34:   //  toodo_wp.Views.ListToVisibilityConverter
+            case 34:   //  ppada.Views.ListToVisibilityConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_34_ListToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 35:   //  toodo_wp.Views.ListToInvertedVisibilityConverter
+            case 35:   //  ppada.Views.ListToInvertedVisibilityConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_35_ListToInvertedVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  toodo_wp.Views.RoutinesListToVisibilityConverter
+            case 36:   //  ppada.Views.RoutinesListToVisibilityConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_36_RoutinesListToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  toodo_wp.Views.RoutinesListToInvertedVisibilityConverter
+            case 37:   //  ppada.Views.RoutinesListToInvertedVisibilityConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_37_RoutinesListToInvertedVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  toodo_wp.Views.Home
+            case 38:   //  ppada.Views.Home
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_38_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  toodo_wp.Views.SelectedFolderConverter
+            case 39:   //  ppada.Views.SelectedFolderConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_39_SelectedFolderConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  toodo_wp.Views.ItemPage
+            case 40:   //  ppada.Views.ItemPage
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_40_ItemPage;
                 userType.AddMemberName("NavigationHelper");
@@ -631,7 +631,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 41:   //  toodo_wp.Views.NewFolder
+            case 41:   //  ppada.Views.NewFolder
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_41_NewFolder;
                 userType.AddMemberName("NavigationHelper");
@@ -640,7 +640,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  toodo_wp.Views.NewRoutine
+            case 42:   //  ppada.Views.NewRoutine
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_42_NewRoutine;
                 userType.AddMemberName("NavigationHelper");
@@ -649,14 +649,14 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 43:   //  toodo_wp.Views.CheckBoxToEnableConverter
+            case 43:   //  ppada.Views.CheckBoxToEnableConverter
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_43_CheckBoxToEnableConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 44:   //  toodo_wp.Views.NewTask
+            case 44:   //  ppada.Views.NewTask
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_44_NewTask;
                 userType.AddMemberName("NavigationHelper");
@@ -665,7 +665,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 45:   //  toodo_wp.Views.RoutineItemPage
+            case 45:   //  ppada.Views.RoutineItemPage
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_45_RoutineItemPage;
                 userType.AddMemberName("NavigationHelper");
@@ -674,7 +674,7 @@ namespace ppada.ppada_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 46:   //  toodo_wp.Views.Settings
+            case 46:   //  ppada.Views.Settings
                 userType = new global::ppada.ppada_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_46_Settings;
                 userType.AddMemberName("NavigationHelper");
@@ -689,282 +689,282 @@ namespace ppada.ppada_XamlTypeInfo
 
         private object get_0_DesignTimeViewModel_AllRoutines(object instance)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
             return that.AllRoutines;
         }
         private void set_0_DesignTimeViewModel_AllRoutines(object instance, object Value)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
-            that.AllRoutines = (global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.routine>)Value;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
+            that.AllRoutines = (global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.routine>)Value;
         }
         private object get_1_routine_routine_id(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_id;
         }
         private void set_1_routine_routine_id(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_id = (global::System.Int32)Value;
         }
         private object get_2_routine_routine_name(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_name;
         }
         private void set_2_routine_routine_name(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_name = (global::System.String)Value;
         }
         private object get_3_routine_routine_details(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_details;
         }
         private void set_3_routine_routine_details(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_details = (global::System.String)Value;
         }
         private object get_4_routine_routine_deadline(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_deadline;
         }
         private void set_4_routine_routine_deadline(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_deadline = (global::System.DateTime)Value;
         }
         private object get_5_routine_routine_status(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_status;
         }
         private void set_5_routine_routine_status(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_status = (global::System.Boolean)Value;
         }
         private object get_6_routine_routine_timesdone(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_timesdone;
         }
         private void set_6_routine_routine_timesdone(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_timesdone = (global::System.Int32)Value;
         }
         private object get_7_routine_routine_timesmissed(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_timesmissed;
         }
         private void set_7_routine_routine_timesmissed(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_timesmissed = (global::System.Int32)Value;
         }
         private object get_8_routine_routine_repeattype(object instance)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             return that.routine_repeattype;
         }
         private void set_8_routine_routine_repeattype(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.routine)instance;
+            var that = (global::ppada.Models.routine)instance;
             that.routine_repeattype = (global::System.Int32)Value;
         }
         private object get_9_DesignTimeViewModel_AllTasks(object instance)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
             return that.AllTasks;
         }
         private void set_9_DesignTimeViewModel_AllTasks(object instance, object Value)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
-            that.AllTasks = (global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.task>)Value;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
+            that.AllTasks = (global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.task>)Value;
         }
         private object get_10_task_task_id(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_id;
         }
         private void set_10_task_task_id(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_id = (global::System.Int32)Value;
         }
         private object get_11_task_task_name(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_name;
         }
         private void set_11_task_task_name(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_name = (global::System.String)Value;
         }
         private object get_12_task_task_details(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_details;
         }
         private void set_12_task_task_details(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_details = (global::System.String)Value;
         }
         private object get_13_task_task_priority(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_priority;
         }
         private void set_13_task_task_priority(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_priority = (global::System.Int32)Value;
         }
         private object get_14_task_task_deadline(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_deadline;
         }
         private void set_14_task_task_deadline(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_deadline = (global::System.DateTime)Value;
         }
         private object get_15_task_task_status(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.task_status;
         }
         private void set_15_task_task_status(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.task_status = (global::System.Boolean)Value;
         }
         private object get_16_task_folder_id(object instance)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             return that.folder_id;
         }
         private void set_16_task_folder_id(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.task)instance;
+            var that = (global::ppada.Models.task)instance;
             that.folder_id = (global::System.Int32)Value;
         }
         private object get_17_DesignTimeViewModel_AllFolders(object instance)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
             return that.AllFolders;
         }
         private void set_17_DesignTimeViewModel_AllFolders(object instance, object Value)
         {
-            var that = (global::toodo_wp.Views.DesignTimeViewModel)instance;
-            that.AllFolders = (global::System.Collections.ObjectModel.ObservableCollection<global::toodo_wp.Models.folder>)Value;
+            var that = (global::ppada.Views.DesignTimeViewModel)instance;
+            that.AllFolders = (global::System.Collections.ObjectModel.ObservableCollection<global::ppada.Models.folder>)Value;
         }
         private object get_18_folder_folder_id(object instance)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             return that.folder_id;
         }
         private void set_18_folder_folder_id(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             that.folder_id = (global::System.Int32)Value;
         }
         private object get_19_folder_folder_name(object instance)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             return that.folder_name;
         }
         private void set_19_folder_folder_name(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             that.folder_name = (global::System.String)Value;
         }
         private object get_20_folder_folder_color(object instance)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             return that.folder_color;
         }
         private void set_20_folder_folder_color(object instance, object Value)
         {
-            var that = (global::toodo_wp.Models.folder)instance;
+            var that = (global::ppada.Models.folder)instance;
             that.folder_color = (global::System.UInt32)Value;
         }
         private object get_21_FolderItemPage_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.FolderItemPage)instance;
+            var that = (global::ppada.Views.FolderItemPage)instance;
             return that.NavigationHelper;
         }
         private object get_22_FolderItemPage_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.FolderItemPage)instance;
+            var that = (global::ppada.Views.FolderItemPage)instance;
             return that.DefaultViewModel;
         }
         private object get_23_ItemPage_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.ItemPage)instance;
+            var that = (global::ppada.Views.ItemPage)instance;
             return that.NavigationHelper;
         }
         private object get_24_ItemPage_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.ItemPage)instance;
+            var that = (global::ppada.Views.ItemPage)instance;
             return that.DefaultViewModel;
         }
         private object get_25_NewFolder_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.NewFolder)instance;
+            var that = (global::ppada.Views.NewFolder)instance;
             return that.NavigationHelper;
         }
         private object get_26_NewFolder_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.NewFolder)instance;
+            var that = (global::ppada.Views.NewFolder)instance;
             return that.DefaultViewModel;
         }
         private object get_27_NewRoutine_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.NewRoutine)instance;
+            var that = (global::ppada.Views.NewRoutine)instance;
             return that.NavigationHelper;
         }
         private object get_28_NewRoutine_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.NewRoutine)instance;
+            var that = (global::ppada.Views.NewRoutine)instance;
             return that.DefaultViewModel;
         }
         private object get_29_NewTask_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.NewTask)instance;
+            var that = (global::ppada.Views.NewTask)instance;
             return that.NavigationHelper;
         }
         private object get_30_NewTask_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.NewTask)instance;
+            var that = (global::ppada.Views.NewTask)instance;
             return that.DefaultViewModel;
         }
         private object get_31_RoutineItemPage_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.RoutineItemPage)instance;
+            var that = (global::ppada.Views.RoutineItemPage)instance;
             return that.NavigationHelper;
         }
         private object get_32_RoutineItemPage_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.RoutineItemPage)instance;
+            var that = (global::ppada.Views.RoutineItemPage)instance;
             return that.DefaultViewModel;
         }
         private object get_33_Settings_NavigationHelper(object instance)
         {
-            var that = (global::toodo_wp.Views.Settings)instance;
+            var that = (global::ppada.Views.Settings)instance;
             return that.NavigationHelper;
         }
         private object get_34_Settings_DefaultViewModel(object instance)
         {
-            var that = (global::toodo_wp.Views.Settings)instance;
+            var that = (global::ppada.Views.Settings)instance;
             return that.DefaultViewModel;
         }
 
@@ -975,213 +975,213 @@ namespace ppada.ppada_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "toodo_wp.Views.DesignTimeViewModel.AllRoutines":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.DesignTimeViewModel");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllRoutines", "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.routine>");
+            case "ppada.Views.DesignTimeViewModel.AllRoutines":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.DesignTimeViewModel");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllRoutines", "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.routine>");
                 xamlMember.Getter = get_0_DesignTimeViewModel_AllRoutines;
                 xamlMember.Setter = set_0_DesignTimeViewModel_AllRoutines;
                 break;
-            case "toodo_wp.Models.routine.routine_id":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_id":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_id", "Int32");
                 xamlMember.Getter = get_1_routine_routine_id;
                 xamlMember.Setter = set_1_routine_routine_id;
                 break;
-            case "toodo_wp.Models.routine.routine_name":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_name":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_name", "String");
                 xamlMember.Getter = get_2_routine_routine_name;
                 xamlMember.Setter = set_2_routine_routine_name;
                 break;
-            case "toodo_wp.Models.routine.routine_details":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_details":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_details", "String");
                 xamlMember.Getter = get_3_routine_routine_details;
                 xamlMember.Setter = set_3_routine_routine_details;
                 break;
-            case "toodo_wp.Models.routine.routine_deadline":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_deadline":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_deadline", "System.DateTime");
                 xamlMember.Getter = get_4_routine_routine_deadline;
                 xamlMember.Setter = set_4_routine_routine_deadline;
                 break;
-            case "toodo_wp.Models.routine.routine_status":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_status":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_status", "Boolean");
                 xamlMember.Getter = get_5_routine_routine_status;
                 xamlMember.Setter = set_5_routine_routine_status;
                 break;
-            case "toodo_wp.Models.routine.routine_timesdone":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_timesdone":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_timesdone", "Int32");
                 xamlMember.Getter = get_6_routine_routine_timesdone;
                 xamlMember.Setter = set_6_routine_routine_timesdone;
                 break;
-            case "toodo_wp.Models.routine.routine_timesmissed":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_timesmissed":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_timesmissed", "Int32");
                 xamlMember.Getter = get_7_routine_routine_timesmissed;
                 xamlMember.Setter = set_7_routine_routine_timesmissed;
                 break;
-            case "toodo_wp.Models.routine.routine_repeattype":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.routine");
+            case "ppada.Models.routine.routine_repeattype":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.routine");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "routine_repeattype", "Int32");
                 xamlMember.Getter = get_8_routine_routine_repeattype;
                 xamlMember.Setter = set_8_routine_routine_repeattype;
                 break;
-            case "toodo_wp.Views.DesignTimeViewModel.AllTasks":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.DesignTimeViewModel");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllTasks", "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.task>");
+            case "ppada.Views.DesignTimeViewModel.AllTasks":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.DesignTimeViewModel");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllTasks", "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.task>");
                 xamlMember.Getter = get_9_DesignTimeViewModel_AllTasks;
                 xamlMember.Setter = set_9_DesignTimeViewModel_AllTasks;
                 break;
-            case "toodo_wp.Models.task.task_id":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_id":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_id", "Int32");
                 xamlMember.Getter = get_10_task_task_id;
                 xamlMember.Setter = set_10_task_task_id;
                 break;
-            case "toodo_wp.Models.task.task_name":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_name":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_name", "String");
                 xamlMember.Getter = get_11_task_task_name;
                 xamlMember.Setter = set_11_task_task_name;
                 break;
-            case "toodo_wp.Models.task.task_details":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_details":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_details", "String");
                 xamlMember.Getter = get_12_task_task_details;
                 xamlMember.Setter = set_12_task_task_details;
                 break;
-            case "toodo_wp.Models.task.task_priority":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_priority":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_priority", "Int32");
                 xamlMember.Getter = get_13_task_task_priority;
                 xamlMember.Setter = set_13_task_task_priority;
                 break;
-            case "toodo_wp.Models.task.task_deadline":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_deadline":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_deadline", "System.DateTime");
                 xamlMember.Getter = get_14_task_task_deadline;
                 xamlMember.Setter = set_14_task_task_deadline;
                 break;
-            case "toodo_wp.Models.task.task_status":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.task_status":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "task_status", "Boolean");
                 xamlMember.Getter = get_15_task_task_status;
                 xamlMember.Setter = set_15_task_task_status;
                 break;
-            case "toodo_wp.Models.task.folder_id":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.task");
+            case "ppada.Models.task.folder_id":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.task");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "folder_id", "Int32");
                 xamlMember.Getter = get_16_task_folder_id;
                 xamlMember.Setter = set_16_task_folder_id;
                 break;
-            case "toodo_wp.Views.DesignTimeViewModel.AllFolders":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.DesignTimeViewModel");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllFolders", "System.Collections.ObjectModel.ObservableCollection`1<toodo_wp.Models.folder>");
+            case "ppada.Views.DesignTimeViewModel.AllFolders":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.DesignTimeViewModel");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "AllFolders", "System.Collections.ObjectModel.ObservableCollection`1<ppada.Models.folder>");
                 xamlMember.Getter = get_17_DesignTimeViewModel_AllFolders;
                 xamlMember.Setter = set_17_DesignTimeViewModel_AllFolders;
                 break;
-            case "toodo_wp.Models.folder.folder_id":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.folder");
+            case "ppada.Models.folder.folder_id":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.folder");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "folder_id", "Int32");
                 xamlMember.Getter = get_18_folder_folder_id;
                 xamlMember.Setter = set_18_folder_folder_id;
                 break;
-            case "toodo_wp.Models.folder.folder_name":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.folder");
+            case "ppada.Models.folder.folder_name":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.folder");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "folder_name", "String");
                 xamlMember.Getter = get_19_folder_folder_name;
                 xamlMember.Setter = set_19_folder_folder_name;
                 break;
-            case "toodo_wp.Models.folder.folder_color":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Models.folder");
+            case "ppada.Models.folder.folder_color":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Models.folder");
                 xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "folder_color", "UInt32");
                 xamlMember.Getter = get_20_folder_folder_color;
                 xamlMember.Setter = set_20_folder_folder_color;
                 break;
-            case "toodo_wp.Views.FolderItemPage.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.FolderItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.FolderItemPage.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.FolderItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_21_FolderItemPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.FolderItemPage.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.FolderItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.FolderItemPage.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.FolderItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_22_FolderItemPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.ItemPage.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.ItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.ItemPage.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.ItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_23_ItemPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.ItemPage.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.ItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.ItemPage.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.ItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_24_ItemPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewFolder.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewFolder");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.NewFolder.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewFolder");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_25_NewFolder_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewFolder.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewFolder");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.NewFolder.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewFolder");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_26_NewFolder_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewRoutine.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewRoutine");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.NewRoutine.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewRoutine");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_27_NewRoutine_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewRoutine.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewRoutine");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.NewRoutine.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewRoutine");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_28_NewRoutine_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewTask.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewTask");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.NewTask.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewTask");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_29_NewTask_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.NewTask.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.NewTask");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.NewTask.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.NewTask");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_30_NewTask_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.RoutineItemPage.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.RoutineItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.RoutineItemPage.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.RoutineItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_31_RoutineItemPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.RoutineItemPage.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.RoutineItemPage");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.RoutineItemPage.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.RoutineItemPage");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_32_RoutineItemPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.Settings.NavigationHelper":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.Settings");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "toodo_wp.Common.NavigationHelper");
+            case "ppada.Views.Settings.NavigationHelper":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.Settings");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "NavigationHelper", "ppada.Common.NavigationHelper");
                 xamlMember.Getter = get_33_Settings_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "toodo_wp.Views.Settings.DefaultViewModel":
-                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("toodo_wp.Views.Settings");
-                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "toodo_wp.Common.ObservableDictionary");
+            case "ppada.Views.Settings.DefaultViewModel":
+                userType = (global::ppada.ppada_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ppada.Views.Settings");
+                xamlMember = new global::ppada.ppada_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "ppada.Common.ObservableDictionary");
                 xamlMember.Getter = get_34_Settings_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
@@ -1510,5 +1510,9 @@ namespace ppada.ppada_XamlTypeInfo
         }
     }
 }
+
+
+
+
 
 

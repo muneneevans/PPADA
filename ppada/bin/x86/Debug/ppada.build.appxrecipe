@@ -142,6 +142,9 @@
     <AppxPackagedFile Include="E:\overmars\project\PPADA\ppada\Models\TasksSummaryFile.txt">
       <PackagePath>Models\TasksSummaryFile.txt</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\overmars\project\PPADA\ppada\Assets\ppada.db">
+      <PackagePath>Assets\ppada.db</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\overmars\project\PPADA\ppada\bin\x86\Debug\ppada.xr.xml">
       <PackagePath>ppada.xr.xml</PackagePath>
     </AppxPackagedFile>

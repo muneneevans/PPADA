@@ -7,18 +7,18 @@ using System.ComponentModel;
 
 namespace ppada.Models
 {
-    public class Page : INotifyPropertyChanged
+    public class Note : INotifyPropertyChanged
     {
-        private int _pageId;
+        private int _noteId;
         [SQLite.PrimaryKey]
-        public int pageId {
+        public int noteId {
             get {
-                return _pageId;
+                return _noteId;
             }
             set {
-                if (value != _pageId) {
-                    _pageId = value;
-                    NotifyPropertyChanged("pageId");
+                if (value != _noteId) {
+                    _noteId = value;
+                    NotifyPropertyChanged("noteId");
                 }
             }
         }
