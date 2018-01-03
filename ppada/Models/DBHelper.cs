@@ -13,81 +13,27 @@ namespace ppada.Models
 {
     public class DBHelper
     {
-
-
-        static string DBPath = "";
-        //static string DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "ppada.db"));//DataBase Name
-        //static string DBPath = Path.Combine(Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "ppada.db"));//DataBase Name
-        //var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-        //static string DBPath = Path.Combine(Path.Combine( "ppada.db"));//DataBase Name
-        SQLiteConnection dbconn ;
+        static string DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "ppada.db"));//DataBase Name
+        SQLiteConnection dbconn = new SQLiteConnection(DBPath);
 
         public DBHelper()
         {
-            checkDB();
-        }
-
-
-        public async void checkDB()
-        {
-
-            //var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-            //var file = await folder.GetFileAsync("ppada.db").AsTask();
-            //var contents = await Windows.Storage.FileIO.ReadTextAsync(file);
-
-            //var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///ppada.db")).AsTask();
-            // You can open the file now, using file.Path, but files in the app's folder are read-only
-            // so you better to copy it to the local storage
-            //try
-            //{
-            //    var copiedFile = await file.CopyAsync(ApplicationData.Current.LocalFolder).AsTask();
-            //}
-            //catch (Exception e) {
-
-            //}
-
-            //DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "ppada.db"));//DataBase Name
-            //DBPath = file.Path;
-            //this.dbconn = new SQLiteConnection(DBPath);
-
-            var installationfolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-            var assetsfolder = await installationfolder.GetFolderAsync("Assets").AsTask();
-            var file = await assetsfolder.GetFileAsync("ppada.db").AsTask();
-            try
-            {
-                //find file in installation folder, copy it to local storage
-                await file.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
-            }
-            catch
-            {
-                //txt.Text = "not found";
-            }
-
-            var db = new SQLite.SQLiteConnection(file.Path);
-            List<Note> notes = db.Query<Note>("select * from Note");
-            
-            
-            DBPath = file.Path;
-            this.dbconn = new SQLiteConnection(DBPath);
             CheckTable();
         }
 
-        public async void CheckTable()
+        public void CheckTable()
         {
             using (dbconn = new SQLiteConnection(DBPath))
             {
-               
+                List<Note> Notes = dbconn.Query<Note>("SELECT *  FROM Note");
                 //dbconn.CreateTable<task>();
                 //dbconn.CreateTable<routine>();
                 //dbconn.CreateTable<folder>();
                 //DefaultFolder();
 
-                List<Note> NoteCollection = dbconn.Query<Note>("Select * from Note").ToList();
-
             }
 
         }
-
 
         public async Task<bool> OnCreate(string DBPath)
         {

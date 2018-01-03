@@ -39,24 +39,19 @@ namespace ppada
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
-        public static ViewModel vm = new ViewModel();
-        //public static string DBPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "ppada.sqlite"));//DataBase Name
+        public static ViewModel vm = new ViewModel();        
 
         public App()
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
-            //Windows.UI.ViewManagement.StatusBar.GetForCurrentView().BackgroundColor = (Windows.UI.Colors.Cyan);
-            //if (!CheckFileExists("ppada.sqlite").Result)
-            //{
-            //    using (var db = new SQLiteConnection(DBPath))
-            //    {
-            //        db.CreateTable<task>();
-
-            //    }
-            //}
-            //DBPath =Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "toodo.sqlite"));//DataBase Name
+            
+            if (!CheckDatabase("ppada.db").Result)
+            {                
+            }
+            if (!CreateDatabase("ppada.db").Result) {
+            }            
 
         }
 
@@ -174,7 +169,7 @@ namespace ppada
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        private async Task<bool> CheckFileExists(string FileName)
+        private async Task<bool> CheckDatabase(string FileName)
         {
             try
             {
@@ -185,6 +180,29 @@ namespace ppada
             {
             }
             return false;
+        }
+
+        private async Task<bool> CreateDatabase(string FileName) {
+            try
+            {
+                var installationfolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+                var assetsfolder = await installationfolder.GetFolderAsync("Assets").AsTask();
+                var file = await assetsfolder.GetFileAsync("ppada.db").AsTask();
+                try
+                {
+                    //find file in installation folder, copy it to local storage
+                    await file.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
+                }
+                catch
+                {
+                    
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }
