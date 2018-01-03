@@ -68,6 +68,46 @@ namespace ppada.Models
         }
 
 
+        #region Note handlers
+        public void createNote(Note newNote)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                dbconn.Insert(newNote);
+            }
+        }
+
+        public void updateNote(Note updatingNote)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var existingNote = dbconn.Query<Note>("SELECT * from Note where noteId = " + updatingNote.noteId).FirstOrDefault();
+                if (existingNote != null)
+                {
+                    existingNote = updatingNote;
+                    dbconn.Update(existingNote);
+                }
+            }
+        }
+
+        public Note GetNote(int noteId)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNote = dbconn.Query<Note>("SELECT * FROM Note WHERE noteId =" + noteId).FirstOrDefault();
+                return foundNote;
+            }
+        }
+
+        public ObservableCollection<Note> GetAllNotes()
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                return new ObservableCollection<Note>(dbconn.Table<Note>().ToList<Note>());
+            }
+        }
+        #endregion
+
         #region task table managers
         public void InsertTask(task t)
         {
