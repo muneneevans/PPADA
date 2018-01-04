@@ -30,8 +30,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5"
+            <Button x:Name="bookMenuButton" Grid.Row="0" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" 
+                    Click="bookMenuButton_Click"
                     >
                 <Grid VerticalAlignment="Stretch"
                           >

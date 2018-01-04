@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ppada.Models;
-using Newtonsoft.Json;
+
 using System.Diagnostics;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -454,7 +454,7 @@ namespace ppada.TaskViewModels
             try
             {
                 AllTasks = new ObservableCollection<task>();
-                await Model.WriteToTasksFileAsync(JsonConvert.SerializeObject(AllTasks));
+                //await Model.WriteToTasksFileAsync(JsonConvert.SerializeObject(AllTasks));
                 Debug.WriteLine("task removed");
             }
             catch { }

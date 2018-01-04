@@ -25,6 +25,7 @@ namespace ppada.Views
         public Start()
         {
             this.InitializeComponent();
+            //this.DataContext = App.vm;
         }
 
         /// <summary>
@@ -34,6 +35,13 @@ namespace ppada.Views
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //request for the first note           
+        }
+
+        private void bookMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            //navigate to the first note in the serie
+            Frame.Navigate(typeof(NotePage), 1);
         }
     }
 }
