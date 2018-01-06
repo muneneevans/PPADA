@@ -47,9 +47,9 @@ namespace ppada
             this.Suspending += this.OnSuspending;
 
             
-            if (!CheckDatabase("ppada.db").Result)
-            {                
-            }
+            //if (!CheckDatabase("ppada.db").Result)
+            //{                
+            //}
             if (!CreateDatabase("ppada.db").Result) {
             }            
 

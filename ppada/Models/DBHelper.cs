@@ -25,7 +25,7 @@ namespace ppada.Models
         {
             using (dbconn = new SQLiteConnection(DBPath))
             {
-                List<Note> Notes = dbconn.Query<Note>("SELECT *  FROM Note");
+                List<Note> Notes = dbconn.Query<Note>("SELECT *  FROM notes");
                 //dbconn.CreateTable<task>();
                 //dbconn.CreateTable<routine>();
                 //dbconn.CreateTable<folder>();
@@ -81,7 +81,7 @@ namespace ppada.Models
         {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
-                var existingNote = dbconn.Query<Note>("SELECT * from Note where noteId = " + updatingNote.noteId).FirstOrDefault();
+                var existingNote = dbconn.Query<Note>("SELECT * from notes where id = " + updatingNote.id).FirstOrDefault();
                 if (existingNote != null)
                 {
                     existingNote = updatingNote;
@@ -90,11 +90,11 @@ namespace ppada.Models
             }
         }
 
-        public Note GetNote(int noteId)
+        public Note GetNote(int id)
         {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
-                var foundNote = dbconn.Query<Note>("SELECT * FROM Note WHERE noteId =" + noteId).FirstOrDefault();
+                var foundNote = dbconn.Query<Note>("SELECT * FROM notes WHERE id =" + id).FirstOrDefault();
                 return foundNote;
             }
         }

@@ -11,7 +11,7 @@ namespace ppada.Models
     {
         private int _noteId;
         [SQLite.PrimaryKey]
-        public int noteId {
+        public int id {
             get {
                 return _noteId;
             }

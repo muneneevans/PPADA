@@ -30,7 +30,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="bookMenuButton" Grid.Row="0" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5"
+            <Button x:Name="bookMenuButton" Grid.Row="0" Grid.Column="0" Background="#F9DC2B" Margin="5,5,5,5"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" 
                     Click="bookMenuButton_Click"
                     >
@@ -56,7 +56,7 @@
                 </Grid>
             </Button>
 
-            <Button Grid.Row="0" Grid.Column="1" Background="#f15f41" Margin="5,5,5,5"
+            <Button Grid.Row="0" Grid.Column="1" Background="#FF9E5B" Margin="5,5,5,5"
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>
@@ -79,7 +79,7 @@
                 </Grid>
             </Button>
 
-            <Button Grid.Row="1" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5" 
+            <Button Grid.Row="1" Grid.Column="0" Background="#E8BF47" Margin="5,5,5,5" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>
@@ -102,7 +102,7 @@
                 </Grid>
             </Button>
 
-            <Button  Grid.Row="1" Grid.Column="1" Background="#f15f41" Margin="5,5,5,5" 
+            <Button  Grid.Row="1" Grid.Column="1" Background="#E84847" Margin="5,5,5,5" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>
@@ -125,7 +125,7 @@
                 </Grid>
             </Button>
 
-            <Button  Grid.Row="2" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5" 
+            <Button  Grid.Row="2" Grid.Column="0" Background="#DB4EFF" Margin="5,5,5,5" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>
@@ -148,7 +148,7 @@
                 </Grid>
             </Button>
 
-            <Button  Grid.Row="2" Grid.Column="1" Background="#f15f41" Margin="5,5,5,5" 
+            <Button  Grid.Row="2" Grid.Column="1" Background="#41C5FF" Margin="5,5,5,5" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>
@@ -171,7 +171,7 @@
                 </Grid>
             </Button>
 
-            <Button Grid.Row="3" Grid.Column="0" Background="#f15f41" Margin="5,5,5,5" 
+            <Button Grid.Row="3" Grid.Column="0" Background="#FF8836" Margin="5,5,5,5" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
                 <Grid >
                     <Grid.RowDefinitions>

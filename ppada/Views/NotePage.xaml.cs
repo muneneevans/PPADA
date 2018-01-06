@@ -126,7 +126,8 @@ namespace ppada.Views
                 this.contentTextBlock.Text = note.content;
                 return true;
             }
-            catch
+             catch
+
             {
                 return false;
             }
@@ -140,7 +141,7 @@ namespace ppada.Views
             {
                 //go to the next 
                 DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.noteId - 1);
+                Note nextNote = db.GetNote(this.currentNote.id - 1);
                 currentNote = nextNote;
                 if (setAttributes(nextNote))
                 {
@@ -159,7 +160,7 @@ namespace ppada.Views
             {
                 //go to the next 
                 DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.noteId + 1);
+                Note nextNote = db.GetNote(this.currentNote.id + 1);
                 currentNote = nextNote;
                 if (setAttributes(nextNote)) {
                     //alls good bro
