@@ -202,28 +202,7 @@ namespace ppada.Views
             throw new NotImplementedException();
         }
     }
-    public class SelectedFolderConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, string language)
-        {
-            ObservableCollection<folder> folder = (ObservableCollection<folder>)value;
-            if (App.vm.CurrentFolder == null)
-            {
-                return null;
-            }
-            else
-            {
-                folder f = folder.FirstOrDefault(x => x.folder_id == App.vm.CurrentFolder.folder_id);
-                return f;
-            }
-
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, string language)
-        {
-            throw new NotImplementedException();
-        }
-    }
+   
     public class BoolToCheckConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)

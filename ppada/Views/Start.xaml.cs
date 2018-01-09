@@ -25,7 +25,7 @@ namespace ppada.Views
         public Start()
         {
             this.InitializeComponent();
-            //this.DataContext = App.vm;
+            this.DataContext = App.vm;
         }
 
         /// <summary>

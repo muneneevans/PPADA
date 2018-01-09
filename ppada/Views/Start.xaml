@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        <local:SelectedFolderConverter x:Key="SelectedFolderConverter"/>
+        
     </Page.Resources>
 
     <Grid>

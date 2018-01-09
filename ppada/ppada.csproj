@@ -107,32 +107,8 @@
       <DependentUpon>WideUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ToastManager\ToastManger.cs" />
-    <Compile Include="Views\FolderItemPage.xaml.cs">
-      <DependentUpon>FolderItemPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ItemPage.xaml.cs">
-      <DependentUpon>ItemPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\NewFolder.xaml.cs">
-      <DependentUpon>NewFolder.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\NewRoutine.xaml.cs">
-      <DependentUpon>NewRoutine.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\NewTask.xaml.cs">
-      <DependentUpon>NewTask.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\NotePage.xaml.cs">
       <DependentUpon>NotePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\RoutineItemPage.xaml.cs">
-      <DependentUpon>RoutineItemPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Settings.xaml.cs">
-      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
@@ -205,39 +181,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\FolderItemPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Home.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ItemPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\NewFolder.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\NewRoutine.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\NewTask.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\NotePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\RoutineItemPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
