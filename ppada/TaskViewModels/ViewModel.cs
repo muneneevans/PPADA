@@ -52,15 +52,7 @@ namespace ppada.TaskViewModels
         private void RoutinePropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             try
-            {
-                if (e.PropertyName == "routine_status")
-                {
-                    routine r = (routine)sender;
-                    AllRoutines.Remove(r);
-                    NotifyPropertyChanged("AllRoutines");
-                    //r.routine_timesdone++;
-                    dbh.UpdateRoutine(r);
-                }
+            {                
 
             }
             catch { }
