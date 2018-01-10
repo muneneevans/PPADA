@@ -43,5 +43,11 @@ namespace ppada.Views
             //navigate to the first note in the serie
             Frame.Navigate(typeof(NotePage), 1);
         }
+
+        private void TopicsButton_Click(object sender, RoutedEventArgs e)
+        {
+            //navigate to the first note in the serie
+            Frame.Navigate(typeof(TopicsPage), 1);
+        }
     }
 }

@@ -90,6 +90,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsManager\Constants.cs" />
     <Compile Include="SettingsManager\SettingsManager.cs" />
@@ -109,6 +110,9 @@
     </Compile>
     <Compile Include="Views\Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TopicsPage.xaml.cs">
+      <DependentUpon>TopicsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ValueConverters.cs" />
   </ItemGroup>
@@ -181,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TopicsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -222,6 +222,7 @@
     <Page.BottomAppBar>
         <CommandBar Background="{StaticResource MainThemeColor}" Foreground="{StaticResource AppBarBackgroundThemeBrush}">
             <CommandBar.SecondaryCommands >
+                <AppBarButton x:Name="TopicsButton" Label="Table of Contents" Icon="List" Click="TopicsButton_Click"/>
                 <AppBarButton x:Name="importButton" Label="Import" Icon="Import"/>
                 <AppBarButton x:Name="galleryButton" Label="Gallery" Icon="Pictures"/>
                 <AppBarButton x:Name="toolsButton" Label="Tools" Icon="Setting"/>

@@ -54,7 +54,25 @@ namespace ppada.Models
                 }
             }
         }
-                
+
+        private int _topicId;
+        [SQLite.PrimaryKey]
+        public int topicId
+        {
+            get
+            {
+                return _topicId;
+            }
+            set
+            {
+                if (value != _topicId)
+                {
+                    _topicId = value;
+                    NotifyPropertyChanged("topicId");
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged(String propertyName)
         {

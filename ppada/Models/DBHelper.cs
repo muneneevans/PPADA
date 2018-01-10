@@ -34,7 +34,7 @@ namespace ppada.Models
             }
 
         }
-    
+
         public async Task<bool> CheckFileExists(string FileName)
         {
             try
@@ -87,8 +87,26 @@ namespace ppada.Models
                 return new ObservableCollection<Note>(dbconn.Table<Note>().ToList<Note>());
             }
         }
+
+        public Note GetTopicNote(int topicId)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNote = dbconn.Query<Note>("select * from notes where topicID =" + topicId).FirstOrDefault();
+                return foundNote;                
+            }
+        }
         #endregion
 
+        #region Topic handlers
+        public ObservableCollection<Topic> GetAllTopics()
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                return new ObservableCollection<Topic>(dbconn.Table<Topic>().ToList<Topic>());
+            }
+        }
+        #endregion
 
         private Color ConvertColor(uint uintCol)
         {

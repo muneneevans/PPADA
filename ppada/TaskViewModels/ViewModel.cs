@@ -18,21 +18,28 @@ namespace ppada.TaskViewModels
 
         #region properties
         DBHelper dbh = new DBHelper();
-        
-        public ObservableCollection<routine> AllRoutines { get; set; }       
+        public ObservableCollection<Topic> AllTopics { get; set; }
+        public ObservableCollection<routine> AllRoutines { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
         public ViewModel()
         {
-            //initialize tasks and routines           
+            //initialize topics and Notes
+            fetchTopics();
             //initializeLists(false);
             //SetCurrentFolder(null);
             //FillNotifications();
             //SetFolders1();
         }
 
-        #region Notification Handlers               
+        #region Notification Handlers     
+        private void fetchTopics()
+        {
+            AllTopics = new ObservableCollection<Topic>();
+            AllTopics = new ObservableCollection<Topic>(dbh.GetAllTopics());
+            NotifyPropertyChanged("AllTopics");
+        }
         #endregion
 
         #region INotify Handlers
@@ -44,23 +51,28 @@ namespace ppada.TaskViewModels
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        
-       
+
+
         private void RoutinesCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {            
+        {
         }
         private void RoutinePropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             try
-            {                
+            {
 
             }
             catch { }
         }
         #endregion
 
-        
 
+        #region Topic Handler
+        public Note GetTopicNote(int topicId)
+        {
+            return dbh.GetTopicNote(topicId);   
+        }
+        #endregion
 
     }
 }
