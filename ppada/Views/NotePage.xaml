@@ -42,6 +42,9 @@
             <AppBarButton x:Name="previousButton" Label="Previous" Icon="Previous" Click="previousButton_Click"/>
             <AppBarButton x:Name="bookMarkButton" Label="BookMark" Icon="Flag" />
             <AppBarButton x:Name="nextButton" Label="Next" Icon="Next" Click="nextButton_Click"/>
+                <AppBarButton x:Name="annotateButton" Label="Annotate" Icon="Bookmarks" Click="annoteButton_Click"/>
+            <CommandBar.SecondaryCommands>
+            </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
 </Page>

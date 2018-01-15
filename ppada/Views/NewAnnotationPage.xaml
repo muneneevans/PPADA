@@ -1,0 +1,28 @@
+﻿<ContentDialog
+    x:Class="ppada.Views.NewAnnotationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ppada.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="New Annotation"
+    PrimaryButtonText="save"  
+    SecondaryButtonText="cancel"
+    PrimaryButtonClick="ContentDialog_SaveButtonClick"
+    SecondaryButtonClick="ContentDialog_CancelButtonClick">
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TextBox x:Name="title" Header="Title"/>
+        <TextBox MinHeight="50" x:Name="content" Header="Content"/>
+
+        <!-- Content body -->
+        <TextBlock x:Name="body" Style="{StaticResource MessageDialogContentStyle}" TextWrapping="Wrap">
+            <TextBlock.Text>
+                Get quick access to any content from the document by creating an annotation.
+            </TextBlock.Text>
+        </TextBlock>
+    </StackPanel>
+
+    
+</ContentDialog>

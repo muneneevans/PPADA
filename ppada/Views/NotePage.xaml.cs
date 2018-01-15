@@ -170,5 +170,11 @@ namespace ppada.Views
             {             
             }
         }
+
+        private async void annoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewAnnotationPage n = new NewAnnotationPage();
+            await n.ShowAsync();
+        }
     }
 }
