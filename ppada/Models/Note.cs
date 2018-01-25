@@ -73,6 +73,22 @@ namespace ppada.Models
             }
         }
 
+        private bool _bookmarked;
+        public bool bookmarked
+        {
+            get
+            {
+                return _bookmarked;
+            }
+            set
+            {
+                if (value != _bookmarked)
+                {
+                    _bookmarked = value;
+                    NotifyPropertyChanged("bookmarked");
+                }
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged(String propertyName)
         {

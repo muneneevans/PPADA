@@ -25,7 +25,7 @@ namespace ppada.Models
         {
             using (dbconn = new SQLiteConnection(DBPath))
             {
-                List<Note> Notes = dbconn.Query<Note>("SELECT *  FROM notes");
+                List<Note> Notes = dbconn.Query<Note>("SELECT *  FROM note");
                 //dbconn.CreateTable<task>();
                 //dbconn.CreateTable<routine>();
                 //dbconn.CreateTable<folder>();
@@ -62,7 +62,7 @@ namespace ppada.Models
         {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
-                var existingNote = dbconn.Query<Note>("SELECT * from notes where id = " + updatingNote.id).FirstOrDefault();
+                var existingNote = dbconn.Query<Note>("SELECT * from note where id = " + updatingNote.id).FirstOrDefault();
                 if (existingNote != null)
                 {
                     existingNote = updatingNote;
@@ -75,7 +75,7 @@ namespace ppada.Models
         {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
-                var foundNote = dbconn.Query<Note>("SELECT * FROM notes WHERE id =" + id).FirstOrDefault();
+                var foundNote = dbconn.Query<Note>("SELECT * FROM note WHERE id =" + id).FirstOrDefault();
                 return foundNote;
             }
         }
@@ -88,11 +88,19 @@ namespace ppada.Models
             }
         }
 
+        public ObservableCollection<Note> GetAllBookmarks() {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNotes = new ObservableCollection<Note>(dbconn.Table<Note>().ToList<Note>().Where(x => x.bookmarked == true));
+                return foundNotes;
+            }
+        }
+
         public Note GetTopicNote(int topicId)
         {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
-                var foundNote = dbconn.Query<Note>("select * from notes where topicID =" + topicId).FirstOrDefault();
+                var foundNote = dbconn.Query<Note>("select * from note where topicID =" + topicId).FirstOrDefault();
                 return foundNote;                
             }
         }

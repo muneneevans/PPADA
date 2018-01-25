@@ -176,5 +176,21 @@ namespace ppada.Views
             NewAnnotationPage n = new NewAnnotationPage();
             await n.ShowAsync();
         }
+
+        private void bookMarkButton_Click(object sender, RoutedEventArgs e)
+        {
+            //go to the next 
+            DBHelper db = new DBHelper();
+            this.currentNote.bookmarked = true;
+            db.updateNote(this.currentNote);
+            try
+            {
+               
+               
+            }
+            catch (Exception exp)
+            {
+            }
+        }
     }
 }
