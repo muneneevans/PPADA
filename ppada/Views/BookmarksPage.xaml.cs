@@ -16,7 +16,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ppada.Models;
-
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace ppada.Views
@@ -24,21 +23,20 @@ namespace ppada.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NotePage : Page
+    public sealed partial class BookmarksPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        //my variables
-        Note currentNote = new Note();
-
-        public NotePage()
+        public BookmarksPage()
         {
             this.InitializeComponent();
 
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            this.DataContext = App.vm;
         }
 
         /// <summary>
@@ -103,14 +101,6 @@ namespace ppada.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
-
-            DBHelper db = new DBHelper();
-            Note selectedNote = db.GetNote((int)e.Parameter);
-            this.currentNote = selectedNote;
-            if (setAttributes(selectedNote))
-            {
-                //tis all good bro
-            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -118,81 +108,15 @@ namespace ppada.Views
             this.navigationHelper.OnNavigatedFrom(e);
         }
 
-        private bool setAttributes(Note note)
-        {
-            try
-            {
-                this.titleTextBlock.Text = note.title;
-                this.contentTextBlock.Text = note.content;
-                return true;
-            }
-            catch
-
-            {
-                return false;
-            }
-        }
-
         #endregion
 
-        private void previousButton_Click(object sender, RoutedEventArgs e)
+        private void BookmarkItemGrid_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            try
-            {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.id - 1);
-                currentNote = nextNote;
-                if (setAttributes(nextNote))
-                {
-                    //alls good bro
-                }
-            }
-            catch (Exception exp)
-            {
-                //throw;
-            }
-        }
-
-        private void nextButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.id + 1);
-                currentNote = nextNote;
-                if (setAttributes(nextNote))
-                {
-                    //alls good bro
-                }
-            }
-            catch (Exception exp)
-            {
-            }
-        }
-
-        private async void annoteButton_Click(object sender, RoutedEventArgs e)
-        {
-            NewAnnotationPage n = new NewAnnotationPage();
-            await n.ShowAsync();
-        }
-
-        private void bookMarkButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                this.currentNote.bookmarked = true;
-                App.vm.AddBookmark(this.currentNote);
+            Grid SelectedGrid = (Grid)sender;
+            Note SelectedNote = (Note)SelectedGrid.DataContext;
 
 
-
-            }
-            catch (Exception exp)
-            {
-            }
+            Frame.Navigate(typeof(NotePage), SelectedNote.id);
         }
     }
 }

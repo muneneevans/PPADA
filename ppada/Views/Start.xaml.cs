@@ -59,5 +59,10 @@ namespace ppada.Views
         {
             Frame.Navigate(typeof(AnnotationsPage));
         }
+
+        private void BookmarksMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BookmarksPage));
+        }
     }
 }

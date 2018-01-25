@@ -103,8 +103,9 @@
                 </Grid>
             </Button>
 
-            <Button  Grid.Row="1" Grid.Column="1" Background="#E84847" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
+            <Button x:Name="BookmarksMenuButton"  Grid.Row="1" Grid.Column="1" Background="#E84847" Margin="5,5,5,5" 
+                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0"
+                    Click="BookmarksMenuButton_Click">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>

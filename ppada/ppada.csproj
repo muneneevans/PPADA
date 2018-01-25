@@ -112,6 +112,9 @@
     <Compile Include="Views\AnnotationsPage.xaml.cs">
       <DependentUpon>AnnotationsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BookmarksPage.xaml.cs">
+      <DependentUpon>BookmarksPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewAnnotationPage.xaml.cs">
       <DependentUpon>NewAnnotationPage.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AnnotationsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookmarksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
