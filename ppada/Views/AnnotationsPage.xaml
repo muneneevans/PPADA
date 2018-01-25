@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="ppada.Views.AnnotationsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ppada.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+
+        <Style x:Key="ItemsContainerStyle" TargetType="ListViewItem" >
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="BorderBrush" Value="white"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <DataTemplate x:Key="AnnotationsDataTemplate">
+            <Grid >
+                <Grid x:Name="AnnotationItemGrid"  IsTapEnabled="True" Tapped="AnnotationItemGrid_Tapped" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="12"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="1" Text="{Binding title}" TextWrapping="WrapWholeWords" FontSize="{StaticResource TextStyleExtraLargeFontSize}"  />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="PPADA" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Annotations" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ListView x:Name="AnnotationsListView" ItemsSource="{Binding AllAnnotations}"  IsItemClickEnabled="True"  >
+                <ListView.ItemTemplate>
+                    <StaticResource ResourceKey="AnnotationsDataTemplate"/>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="ItemsContainerStyle"/>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>

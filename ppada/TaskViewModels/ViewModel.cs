@@ -19,6 +19,7 @@ namespace ppada.TaskViewModels
         #region properties
         DBHelper dbh = new DBHelper();
         public ObservableCollection<Topic> AllTopics { get; set; }
+        public ObservableCollection<Annotation> AllAnnotations { get; set; }
         public ObservableCollection<routine> AllRoutines { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
@@ -27,6 +28,7 @@ namespace ppada.TaskViewModels
         {
             //initialize topics and Notes
             fetchTopics();
+            fetchAnnotations();
             //initializeLists(false);
             //SetCurrentFolder(null);
             //FillNotifications();
@@ -40,6 +42,13 @@ namespace ppada.TaskViewModels
             AllTopics = new ObservableCollection<Topic>(dbh.GetAllTopics());
             NotifyPropertyChanged("AllTopics");
         }
+        private void fetchAnnotations()
+        {
+            AllAnnotations = new ObservableCollection<Annotation>();
+            AllAnnotations = new ObservableCollection<Annotation>(dbh.GetAllAnnotations());
+            NotifyPropertyChanged("AllAnnotations");
+        }
+
         #endregion
 
         #region INotify Handlers
@@ -74,5 +83,11 @@ namespace ppada.TaskViewModels
         }
         #endregion
 
+        #region Annotation handlers
+        public void createNewAnnotation(Annotation newAnnotation) {
+            dbh.createAnnotation(newAnnotation);
+            fetchAnnotations();
+        }
+        #endregion
     }
 }

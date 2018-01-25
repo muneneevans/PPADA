@@ -89,6 +89,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Models\Annotation.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +106,9 @@
       <DependentUpon>WideUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ToastManager\ToastManger.cs" />
+    <Compile Include="Views\AnnotationsPage.xaml.cs">
+      <DependentUpon>AnnotationsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewAnnotationPage.xaml.cs">
       <DependentUpon>NewAnnotationPage.xaml</DependentUpon>
     </Compile>
@@ -180,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="tile\WideUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnnotationsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

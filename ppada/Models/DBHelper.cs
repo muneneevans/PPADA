@@ -108,6 +108,24 @@ namespace ppada.Models
         }
         #endregion
 
+        #region Annotation handlers
+        public void createAnnotation(Annotation newAnnotation)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                dbconn.Insert(newAnnotation);
+            }
+        }
+
+        public ObservableCollection<Annotation> GetAllAnnotations()
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                return new ObservableCollection<Annotation>(dbconn.Table<Annotation>().ToList<Annotation>());
+            }
+        }
+        #endregion
+
         private Color ConvertColor(uint uintCol)
         {
             byte A = (byte)((uintCol & 0xFF000000) >> 24);

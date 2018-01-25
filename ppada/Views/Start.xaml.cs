@@ -49,5 +49,15 @@ namespace ppada.Views
             //navigate to the first note in the serie
             Frame.Navigate(typeof(TopicsPage), 1);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void annotationsMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AnnotationsPage));
+        }
     }
 }
