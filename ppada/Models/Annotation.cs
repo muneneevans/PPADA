@@ -10,7 +10,7 @@ namespace ppada.Models
     public class Annotation : INotifyPropertyChanged
     {
         private int _id;
-        [SQLite.PrimaryKey]
+        [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int id
         {
             get

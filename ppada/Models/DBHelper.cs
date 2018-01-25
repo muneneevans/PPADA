@@ -124,6 +124,15 @@ namespace ppada.Models
                 return new ObservableCollection<Annotation>(dbconn.Table<Annotation>().ToList<Annotation>());
             }
         }
+
+        public Annotation GetAnnotation(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNote = dbconn.Query<Annotation>("SELECT * FROM Annotation WHERE id =" + id).FirstOrDefault();
+                return foundNote;
+            }
+        }
         #endregion
 
         private Color ConvertColor(uint uintCol)

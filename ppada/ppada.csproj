@@ -106,6 +106,9 @@
       <DependentUpon>WideUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ToastManager\ToastManger.cs" />
+    <Compile Include="Views\AnnotationItemPage.xaml.cs">
+      <DependentUpon>AnnotationItemPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AnnotationsPage.xaml.cs">
       <DependentUpon>AnnotationsPage.xaml</DependentUpon>
     </Compile>
@@ -184,6 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="tile\WideUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnnotationItemPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

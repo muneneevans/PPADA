@@ -24,19 +24,18 @@ namespace ppada.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AnnotationsPage : Page
+    public sealed partial class AnnotationItemPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        public AnnotationsPage()
+        public AnnotationItemPage()
         {
             this.InitializeComponent();
 
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
-            this.DataContext = App.vm;
         }
 
         /// <summary>
@@ -101,6 +100,29 @@ namespace ppada.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+
+            DBHelper db = new DBHelper();
+            Annotation selectedAnnotation = db.GetAnnotation((int)e.Parameter);
+            //this.currentNote = selectedAnnotation;
+            if (setAttributes(selectedAnnotation))
+            {
+                //tis all good bro
+            }
+        }
+
+        private bool setAttributes(Annotation annotation)
+        {
+            try
+            {                
+                this.titleTextBlock.Text = annotation.title;
+                this.contentTextBlock.Text = annotation.content;
+                return true;
+            }
+            catch
+
+            {
+                return false;
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -109,14 +131,5 @@ namespace ppada.Views
         }
 
         #endregion
-
-        private void AnnotationItemGrid_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Grid SelectedGrid = (Grid)sender;
-            Annotation SelectedAnnotation = (Annotation)SelectedGrid.DataContext;
-
-            
-            Frame.Navigate(typeof(AnnotationItemPage), SelectedAnnotation.id);
-        }
     }
 }
