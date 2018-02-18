@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ppada.Models;
+using Windows.UI.Popups;
 
 // The Content Dialog item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -25,7 +26,7 @@ namespace ppada.Views
         {
             this.InitializeComponent();
             DataContext = App.vm;
-            
+
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -36,14 +37,27 @@ namespace ppada.Views
         {
         }
 
-        private void ContentDialog_SaveButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private async void ContentDialog_SaveButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            //create a new annotation
-            DBHelper dbh = new DBHelper();
-            Annotation newAnnotation = new Annotation();
-            newAnnotation.title = this.title.Text;
-            newAnnotation.content = this.content.Text;
-            App.vm.createNewAnnotation(newAnnotation);
+            //check for empty text
+            if (this.title.Text == "" || this.content.Text == "")
+            {
+                //show error message
+                MessageDialog msgbox = new MessageDialog("please enter content ");
+                //Calling the Show method of MessageDialog class  
+                //which will show the MessageBox  
+                await msgbox.ShowAsync();
+                return;
+            }
+            else
+            {
+                //create a new annotation
+                DBHelper dbh = new DBHelper();
+                Annotation newAnnotation = new Annotation();
+                newAnnotation.title = this.title.Text;
+                newAnnotation.content = this.content.Text;
+                App.vm.createNewAnnotation(newAnnotation);
+            }
         }
 
         private void ContentDialog_CancelButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
