@@ -148,8 +148,9 @@ namespace ppada.Views
                     //alls good bro
                 }
             }
-            catch (Exception exp)
+            catch 
             {
+
                 //throw;
             }
         }
@@ -182,13 +183,8 @@ namespace ppada.Views
         {
             try
             {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                this.currentNote.bookmarked = true;
-                App.vm.AddBookmark(this.currentNote);
-
-
-
+                //go to the next                                 
+                App.vm.ToggleBookmark(this.currentNote);                
             }
             catch (Exception exp)
             {

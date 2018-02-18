@@ -118,5 +118,20 @@ namespace ppada.Views
             
             Frame.Navigate(typeof(AnnotationItemPage), SelectedAnnotation.id);
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            //delete the selected button
+            MenuFlyoutItem Clickeditem = (MenuFlyoutItem)sender;
+            Annotation SelectedAnnotation = (Annotation)Clickeditem.DataContext;
+            App.vm.DeleteAnnotation(SelectedAnnotation);
+        }
+
+        private void Grid_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            FrameworkElement senderElement = sender as FrameworkElement;
+            FlyoutBase flyoutbase = FlyoutBase.GetAttachedFlyout(senderElement);
+            flyoutbase.ShowAt(senderElement); 
+        }
     }
 }

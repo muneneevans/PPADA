@@ -37,4 +37,9 @@
             </ScrollViewer>
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar Background="{StaticResource MainThemeColor}" Foreground="{StaticResource AppBarBackgroundThemeBrush}">
+            <AppBarButton x:Name="DeleteButton" Label="Delte" Icon="Delete" Click="DeleteButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

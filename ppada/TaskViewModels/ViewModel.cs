@@ -37,6 +37,13 @@ namespace ppada.TaskViewModels
             //SetFolders1();
         }
 
+        public void Refresh()
+        {
+            fetchTopics();
+            fetchAnnotations();
+            fetchBookmarks();
+        }
+
         #region Notification Handlers     
         private void fetchTopics()
         {
@@ -86,20 +93,30 @@ namespace ppada.TaskViewModels
         #region Topic Handler
         public Note GetTopicNote(int topicId)
         {
-            return dbh.GetTopicNote(topicId);   
+            return dbh.GetTopicNote(topicId);
         }
         #endregion
 
         #region Annotation handlers
-        public void createNewAnnotation(Annotation newAnnotation) {
+        public void createNewAnnotation(Annotation newAnnotation)
+        {
             dbh.createAnnotation(newAnnotation);
             fetchAnnotations();
         }
 
-        public void AddBookmark(Note updatingNote) {
+        public void ToggleBookmark(Note updatingNote)
+        {
+            updatingNote.bookmarked = !updatingNote.bookmarked;
             dbh.updateNote(updatingNote);
             fetchBookmarks();
 
+        }
+
+
+        public void DeleteAnnotation(Annotation selectedAnnotation)
+        {
+            dbh.DeleteAnnotation(selectedAnnotation.id);
+            fetchAnnotations();
         }
         #endregion
     }

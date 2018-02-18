@@ -28,6 +28,7 @@ namespace ppada.Views
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Annotation CurrentAnnotation = new Annotation();
 
         public AnnotationItemPage()
         {
@@ -103,6 +104,7 @@ namespace ppada.Views
 
             DBHelper db = new DBHelper();
             Annotation selectedAnnotation = db.GetAnnotation((int)e.Parameter);
+            this.CurrentAnnotation = selectedAnnotation;
             //this.currentNote = selectedAnnotation;
             if (setAttributes(selectedAnnotation))
             {
@@ -131,5 +133,11 @@ namespace ppada.Views
         }
 
         #endregion
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.vm.DeleteAnnotation(this.CurrentAnnotation);
+            this.navigationHelper.GoBack();
+        }
     }
 }

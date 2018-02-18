@@ -88,7 +88,8 @@ namespace ppada.Models
             }
         }
 
-        public ObservableCollection<Note> GetAllBookmarks() {
+        public ObservableCollection<Note> GetAllBookmarks()
+        {
             using (var dbconn = new SQLiteConnection(DBPath))
             {
                 var foundNotes = new ObservableCollection<Note>(dbconn.Table<Note>().ToList<Note>().Where(x => x.bookmarked == true));
@@ -101,7 +102,7 @@ namespace ppada.Models
             using (var dbconn = new SQLiteConnection(DBPath))
             {
                 var foundNote = dbconn.Query<Note>("select * from note where topicID =" + topicId).FirstOrDefault();
-                return foundNote;                
+                return foundNote;
             }
         }
         #endregion
@@ -139,6 +140,18 @@ namespace ppada.Models
             {
                 var foundNote = dbconn.Query<Annotation>("SELECT * FROM Annotation WHERE id =" + id).FirstOrDefault();
                 return foundNote;
+            }
+        }
+
+        public void DeleteAnnotation(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundAnnotation = dbconn.Query<Annotation>("SELECT * FROM Annotation WHERE id =" + id).FirstOrDefault();
+                if (foundAnnotation != null)
+                {
+                    dbconn.Delete(foundAnnotation);
+                }
             }
         }
         #endregion

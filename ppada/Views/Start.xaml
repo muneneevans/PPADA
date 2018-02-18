@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        
+
     </Page.Resources>
 
     <Grid>
@@ -19,205 +19,151 @@
             <ColumnDefinition Width="12"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            <ScrollViewer>
+                <StackPanel>
 
-            <Button x:Name="bookMenuButton" Grid.Row="0" Grid.Column="0" Background="#F9DC2B" Margin="5,5,5,5"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" 
-                    Click="bookMenuButton_Click"
-                    >
-                <Grid VerticalAlignment="Stretch"
-                          >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="bookMenuButton_Click">
+                        <Grid Background="#F9DC2B"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Copy" HorizontalAlignment="Center" />
-                            <TextBlock Text="Book" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                            <Grid Grid.Column="0" HorizontalAlignment="Center"  Margin="0,0,0,-15">
+                                <AppBarButton Icon="Copy" HorizontalAlignment="Center" />
+                            </Grid>
 
-            <Button x:Name="annotationsMenuButton" Grid.Row="0" Grid.Column="1" Background="#FF9E5B" Margin="5,5,5,5"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0"
-                    Click="annotationsMenuButton_Click">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="The Act" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="List" HorizontalAlignment="Center"  />
-                            <TextBlock Text="Annotations" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="annotationsMenuButton_Click">
+                        <Grid Background="#FF9E5B"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="1" Grid.Column="0" Background="#E8BF47" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" HorizontalAlignment="Center"  Margin="0,0,0,-15">
+                                <AppBarButton Icon="List" HorizontalAlignment="Center"  />
+                            </Grid>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="ReportHacked"  HorizontalAlignment="Center" />
-                            <TextBlock Text="Report Issues" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="Annotations" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
 
-            <Button x:Name="BookmarksMenuButton"  Grid.Row="1" Grid.Column="1" Background="#E84847" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0"
-                    Click="BookmarksMenuButton_Click">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                        <Grid  Background="#E84847" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Flag"  HorizontalAlignment="Center" />
-                            <TextBlock Text="Bookmarks" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="Flag"  HorizontalAlignment="Center" />
+                            </Grid>
 
-            <Button  Grid.Row="2" Grid.Column="0" Background="#DB4EFF" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="Bookmarks" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Mail"  HorizontalAlignment="Center" />
-                            <TextBlock Text="Notices" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                        <Grid  Background="#41C5FF" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-            <Button  Grid.Row="2" Grid.Column="1" Background="#41C5FF" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="Mail"  HorizontalAlignment="Center" />
+                            </Grid>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Calendar"  HorizontalAlignment="Center" />
-                            <TextBlock Text="News and Events" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="News and Events" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
 
-            <Button Grid.Row="3" Grid.Column="0" Background="#FF8836" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="annotationsMenuButton_Click">
+                        <Grid  Background="#E8BF47" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Help"  HorizontalAlignment="Center" />
-                            <TextBlock Text="Help Desk" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="ReportHacked"  HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                            </Grid>
 
-            <Button Grid.Row="3" Grid.Column="1" Background="#f15f41" Margin="5,5,5,5" 
-                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="Report Issues" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
 
-                    <Grid Grid.Row="1" Grid.Column="1" >
-                        <StackPanel>
-                            <AppBarButton Icon="Account"  HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <TextBlock Text="e-Procurement" HorizontalAlignment="Center" FontSize="{StaticResource TextStyleLargeFontSize}"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-            </Button>
+                    
+
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                        <Grid  Background="#DB4EFF" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="Mail"  HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="Notices" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                    
+
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                        <Grid  Background="#FF8836" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="Help"  HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="Help Desk" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                        <Grid  Background="#f15f41" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,-15">
+                                <AppBarButton Icon="Account"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Column="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                <TextBlock Text="e-Procuremen" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 

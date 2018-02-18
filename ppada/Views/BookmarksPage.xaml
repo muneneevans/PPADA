@@ -18,7 +18,7 @@
 
         <DataTemplate x:Key="BookmarksDataTemplate">
             <Grid >
-                <Grid x:Name="BookmarkItemGrid"  IsTapEnabled="True" Tapped="BookmarkItemGrid_Tapped" >
+                <Grid x:Name="BookmarkItemGrid"  IsTapEnabled="True" Tapped="BookmarkItemGrid_Tapped" Holding="Grid_Holding">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="12"/>
                         <RowDefinition Height="3*"/>
@@ -26,6 +26,11 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Row="1" Text="{Binding title}" TextWrapping="WrapWholeWords" FontSize="{StaticResource TextStyleExtraLargeFontSize}"  />
+                    <FlyoutBase.AttachedFlyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem x:Name="DeleteButton" Text="Delete" Click="DeleteButton_Click"/>
+                        </MenuFlyout>
+                    </FlyoutBase.AttachedFlyout>
                 </Grid>
             </Grid>
         </DataTemplate>

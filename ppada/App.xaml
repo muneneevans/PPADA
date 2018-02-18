@@ -7,8 +7,8 @@
 
     <Application.Resources>
 
-        <SolidColorBrush x:Key="MainThemeColor" Color="#00838F"/>
-        <SolidColorBrush x:Key="AccentThemeColor" Color="#FF6D00"/>
+        <SolidColorBrush x:Key="MainThemeColor" Color="#201544"/>
+        <SolidColorBrush x:Key="AccentThemeColor" Color="#F4CB00"/>
         <SolidColorBrush x:Key="ThirdThemeColor" Color="#45514F"/>        
 
 

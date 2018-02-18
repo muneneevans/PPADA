@@ -118,5 +118,19 @@ namespace ppada.Views
 
             Frame.Navigate(typeof(NotePage), SelectedNote.id);
         }
+
+        private void Grid_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            FrameworkElement senderElement = sender as FrameworkElement;
+            FlyoutBase flyoutbase = FlyoutBase.GetAttachedFlyout(senderElement);
+            flyoutbase.ShowAt(senderElement);
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            MenuFlyoutItem Clickeditem = (MenuFlyoutItem)sender;
+            Note SelectedNote = (Note)Clickeditem.DataContext;
+            App.vm.ToggleBookmark(SelectedNote);
+        }
     }
 }
