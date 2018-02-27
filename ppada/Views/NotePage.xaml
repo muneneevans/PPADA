@@ -23,7 +23,7 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="10,0,10,0">
-            <TextBox Text="search"  Margin="0,10,0,0"/>
+            <TextBox x:Name="SearchTextBox" PlaceholderText="Search"  Margin="0,10,0,0" TextChanged="SearchTextBox_TextChanged" KeyDown="SearchTextBox_KeyDown"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
@@ -44,6 +44,7 @@
             <AppBarButton x:Name="nextButton" Label="Next" Icon="Next" Click="nextButton_Click"/>
             <AppBarButton x:Name="annotateButton" Label="Annotate" Icon="Bookmarks" Click="annoteButton_Click"/>
             <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="shareButton" Label="Share" Icon="ReShare" Click="shareButton_Click"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

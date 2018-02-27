@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.System;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -16,8 +17,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ppada.Models;
-using Windows.System;
-using Windows.ApplicationModel.DataTransfer;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -26,21 +25,20 @@ namespace ppada.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NotePage : Page
+    public sealed partial class SearchPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        private DataTransferManager _dataTransferManager;
-        //my variables
-        Note currentNote = new Note();
 
-        public NotePage()
+        public SearchPage()
         {
             this.InitializeComponent();
 
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            this.DataContext = App.vm;
         }
 
         /// <summary>
@@ -105,24 +103,7 @@ namespace ppada.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
-            this._dataTransferManager = DataTransferManager.GetForCurrentView();
-            this._dataTransferManager.DataRequested += OnDataRequested;
-
-
-            DBHelper db = new DBHelper();
-            Note selectedNote = db.GetNote((int)e.Parameter);
-            this.currentNote = selectedNote;
-            if (setAttributes(selectedNote))
-            {
-                //tis all good bro
-            }
-        }
-
-        private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs e)
-        {
-            e.Request.Data.Properties.Title = this.currentNote.content;
-            e.Request.Data.Properties.Description = this.currentNote.content;
-            e.Request.Data.SetWebLink( new Uri("http://www.ppada.vorane.com")); 
+            this.SearchTextBox.Text = e.Parameter.ToString();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -130,97 +111,27 @@ namespace ppada.Views
             this.navigationHelper.OnNavigatedFrom(e);
         }
 
-        private bool setAttributes(Note note)
-        {
-            try
-            {
-                this.titleTextBlock.Text = note.title;
-                this.contentTextBlock.Text = note.content;
-                return true;
-            }
-            catch
-
-            {
-                return false;
-            }
-        }
-
         #endregion
 
-        private void previousButton_Click(object sender, RoutedEventArgs e)
+        private void SearchTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            try
-            {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.id - 1);
-                currentNote = nextNote;
-                if (setAttributes(nextNote))
-                {
-                    //alls good bro
-                }
-            }
-            catch 
-            {
-
-                //throw;
-            }
+            // if (e.Key == VirtualKey.Enter) {
+            //    App.vm.SearchNote(this.SearchTextBox.Text);                
+            //}
         }
 
-        private void nextButton_Click(object sender, RoutedEventArgs e)
+        private void SearchGrid_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            try
-            {
-                //go to the next 
-                DBHelper db = new DBHelper();
-                Note nextNote = db.GetNote(this.currentNote.id + 1);
-                currentNote = nextNote;
-                if (setAttributes(nextNote))
-                {
-                    //alls good bro
-                }
-            }
-            catch (Exception exp)
-            {
-            }
-        }
+            Grid SelectedGrid = (Grid)sender;
+            Note SelectedNote = (Note)SelectedGrid.DataContext;
 
-        private async void annoteButton_Click(object sender, RoutedEventArgs e)
-        {
-            NewAnnotationPage n = new NewAnnotationPage();
-            await n.ShowAsync();
-        }
 
-        private void bookMarkButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //go to the next                                 
-                App.vm.ToggleBookmark(this.currentNote);                
-            }
-            catch (Exception exp)
-            {
-            }
+            Frame.Navigate(typeof(NotePage), SelectedNote.id);
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //search for the text
-           
-        }
-
-        private void SearchTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-
-            if (e.Key == VirtualKey.Enter) {
-                App.vm.SearchNote(this.SearchTextBox.Text);
-                this.Frame.Navigate(typeof(SearchPage), this.SearchTextBox.Text);
-            }
-        }
-
-        private void shareButton_Click(object sender, RoutedEventArgs e)
-        {
-            Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI();
+            App.vm.SearchNote(this.SearchTextBox.Text);
         }
     }
 }

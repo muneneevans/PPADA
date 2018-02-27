@@ -19,6 +19,7 @@ namespace ppada.TaskViewModels
         #region properties
         DBHelper dbh = new DBHelper();
         public ObservableCollection<Topic> AllTopics { get; set; }
+        public ObservableCollection<Note> SearchNotes { get; set; }
         public ObservableCollection<Note> AllBookmarks { get; set; }
         public ObservableCollection<Annotation> AllAnnotations { get; set; }
         public ObservableCollection<routine> AllRoutines { get; set; }
@@ -94,6 +95,43 @@ namespace ppada.TaskViewModels
         public Note GetTopicNote(int topicId)
         {
             return dbh.GetTopicNote(topicId);
+        }
+
+        public void SearchNote(string text)
+        {
+
+            string[] searchTerms = text.Split(' ');
+
+            //Using DataContext.Log is handy 
+            //if we want to look at Linq2SQL's generated SQL:
+            //dc.Log = new System.IO.StringWriter();
+
+            //Prepare to build a "players" query:
+            IQueryable<Note> NotesQuery = (IQueryable<Note>) (dbh.GetAllNotes().ToList<Note>().AsQueryable());
+
+            //Refine our query, one search term at a time:
+            foreach (var term in searchTerms)
+            {
+                //Create (and use) a local variable of the search term
+                //to avoid the "outer variable trap":
+                //http://stackoverflow.com/questions/3416758
+                //http://stackoverflow.com/questions/295593
+                var currentTerm = term.Trim();
+                NotesQuery = NotesQuery.Where(p => ( p.title.ToLower().Contains(currentTerm.ToLower()) || p.content.ToLower().Contains(currentTerm.ToLower())) );
+            }
+
+            //Now we have the complete query. Get the results from the database:
+            //var FilteredNotes = NotesQuery.Select(p => new
+            //{
+            //    p.title,
+            //    p.content,
+            //    p.id,                
+            //}).ToList();
+
+            this.SearchNotes = new ObservableCollection<Note>(NotesQuery);
+            //See if the generated SQL looked like it was supposed to:
+            NotifyPropertyChanged("SearchNotes");
+
         }
         #endregion
 

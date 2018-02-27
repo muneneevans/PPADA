@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,13 +23,17 @@ namespace ppada.Views
     /// </summary>
     public sealed partial class Start : Page
     {
+        private DataTransferManager _dataTransferManager;
         public Start()
         {
             this.InitializeComponent();
             this.DataContext = App.vm;
+
+            this._dataTransferManager = DataTransferManager.GetForCurrentView();
+            this._dataTransferManager.DataRequested += OnDataRequested;
         }
 
-        /// <summary>
+        /// <summary> 
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
@@ -63,6 +68,18 @@ namespace ppada.Views
         private void BookmarksMenuButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(BookmarksPage));
+        }
+
+        private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs e)
+        {
+            e.Request.Data.Properties.Title = "PPADA App";
+            e.Request.Data.Properties.Description = "guidelines in public procurement";
+            e.Request.Data.SetWebLink(new Uri("http://www.ppada.vorane.com"));
+        }
+
+        private void shareButton_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI();
         }
     }
 }

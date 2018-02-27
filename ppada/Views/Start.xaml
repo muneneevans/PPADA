@@ -173,9 +173,9 @@
                 <AppBarButton x:Name="TopicsButton" Label="Table of Contents" Icon="List" Click="TopicsButton_Click"/>
                 <AppBarButton x:Name="importButton" Label="Import" Icon="Import"/>
                 <AppBarButton x:Name="galleryButton" Label="Gallery" Icon="Pictures"/>
-                <AppBarButton x:Name="toolsButton" Label="Tools" Icon="Setting"/>
-                <AppBarButton x:Name="shareButton" Label="Share" Icon="Favorite"/>
+                <AppBarButton x:Name="toolsButton" Label="Tools" Icon="Setting"/>                
                 <AppBarButton x:Name="sendButton" Label="Send" Icon="Send"/>
+                <AppBarButton x:Name="shareButton" Label="Share the app" Icon="ReShare" Click="shareButton_Click"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
