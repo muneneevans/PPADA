@@ -10,6 +10,9 @@ using System.Diagnostics;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using ppada.tile;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ppada.TaskViewModels
 {
@@ -18,11 +21,14 @@ namespace ppada.TaskViewModels
 
         #region properties
         DBHelper dbh = new DBHelper();
+        private List<News> value;
+
         public ObservableCollection<Topic> AllTopics { get; set; }
         public ObservableCollection<Note> SearchNotes { get; set; }
         public ObservableCollection<Note> AllBookmarks { get; set; }
         public ObservableCollection<Annotation> AllAnnotations { get; set; }
         public ObservableCollection<routine> AllRoutines { get; set; }
+        public ObservableCollection<News> AllNews { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
@@ -32,6 +38,7 @@ namespace ppada.TaskViewModels
             fetchTopics();
             fetchAnnotations();
             fetchBookmarks();
+            fetchNews();
             //initializeLists(false);
             //SetCurrentFolder(null);
             //FillNotifications();
@@ -43,6 +50,7 @@ namespace ppada.TaskViewModels
             fetchTopics();
             fetchAnnotations();
             fetchBookmarks();
+            fetchNews();
         }
 
         #region Notification Handlers     
@@ -64,6 +72,25 @@ namespace ppada.TaskViewModels
             AllBookmarks = new ObservableCollection<Note>(dbh.GetAllBookmarks());
             NotifyPropertyChanged("AllBookmarks");
         }
+        private async void fetchNews()
+        {
+            AllNews = new ObservableCollection<News>();
+            AllNews = new ObservableCollection<News>(dbh.GetAllNews());
+            NotifyPropertyChanged("AllNews");
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage Response = await client.GetAsync("https://zebaki.co.ke/Procurement/Waondo/pages/grtFeeds.php");
+            string result = await Response.Content.ReadAsStringAsync();
+
+            var values = JsonConvert.DeserializeObject<Dictionary<string, List<News>>>(result);
+            if (values.TryGetValue("result", out value))
+            {
+                AllNews = new ObservableCollection<News>(value);
+            }
+            NotifyPropertyChanged("AllNews");
+              
+        }
+
         #endregion
 
         #region INotify Handlers
@@ -107,7 +134,7 @@ namespace ppada.TaskViewModels
             //dc.Log = new System.IO.StringWriter();
 
             //Prepare to build a "players" query:
-            IQueryable<Note> NotesQuery = (IQueryable<Note>) (dbh.GetAllNotes().ToList<Note>().AsQueryable());
+            IQueryable<Note> NotesQuery = (IQueryable<Note>)(dbh.GetAllNotes().ToList<Note>().AsQueryable());
 
             //Refine our query, one search term at a time:
             foreach (var term in searchTerms)
@@ -117,7 +144,7 @@ namespace ppada.TaskViewModels
                 //http://stackoverflow.com/questions/3416758
                 //http://stackoverflow.com/questions/295593
                 var currentTerm = term.Trim();
-                NotesQuery = NotesQuery.Where(p => ( p.title.ToLower().Contains(currentTerm.ToLower()) || p.content.ToLower().Contains(currentTerm.ToLower())) );
+                NotesQuery = NotesQuery.Where(p => (p.title.ToLower().Contains(currentTerm.ToLower()) || p.content.ToLower().Contains(currentTerm.ToLower())));
             }
 
             //Now we have the complete query. Get the results from the database:
@@ -155,6 +182,23 @@ namespace ppada.TaskViewModels
         {
             dbh.DeleteAnnotation(selectedAnnotation.id);
             fetchAnnotations();
+        }
+        #endregion
+
+        #region News handlers
+        public void createNewNews(News newNews)
+        {
+            dbh.createNews(newNews);
+            fetchNews();
+        }
+
+
+
+
+        public void DeleteNews(News selectedNews)
+        {
+            dbh.DeleteNews(selectedNews.NewsId);
+            fetchNews();
         }
         #endregion
     }

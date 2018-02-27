@@ -73,7 +73,7 @@
                         </Grid>
                     </Border>
 
-                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="BookmarksMenuButton_Click">
+                    <Border BorderThickness="1" BorderBrush="Gray" Margin="5,15,5,5" Tapped="newsMenuButton_Click">
                         <Grid  Background="#41C5FF" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

@@ -156,6 +156,47 @@ namespace ppada.Models
         }
         #endregion
 
+
+        #region News handlers
+        public void createNews(News newNews)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                dbconn.Insert(newNews);
+            }
+        }
+
+        public ObservableCollection<News> GetAllNews()
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                return new ObservableCollection<News>(dbconn.Table<News>().ToList<News>());
+            }
+        }
+
+        public News GetNews(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNews = dbconn.Query<News>("SELECT * FROM News WHERE id =" + id).FirstOrDefault();
+                return foundNews;
+            }
+        }
+
+        public void DeleteNews(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNews = dbconn.Query<News>("SELECT * FROM News WHERE id =" + id).FirstOrDefault();
+                if (foundNews != null)
+                {
+                    dbconn.Delete(foundNews);
+                }
+            }
+        }
+        #endregion
+
+
         private Color ConvertColor(uint uintCol)
         {
             byte A = (byte)((uintCol & 0xFF000000) >> 24);

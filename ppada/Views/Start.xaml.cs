@@ -81,5 +81,10 @@ namespace ppada.Views
         {
             Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI();
         }
+
+        private void newsMenuButton_Click(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewsPage));
+        }
     }
 }
