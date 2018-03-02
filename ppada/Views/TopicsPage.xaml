@@ -10,6 +10,7 @@
 
     <Page.Resources>
 
+        <CollectionViewSource IsSourceGrouped="True" x:Name="Source" Source="{Binding AllTopicGroups}" />
         <Style x:Key="ItemsContainerStyle" TargetType="ListViewItem" >
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <Setter Property="BorderBrush" Value="white"/>
@@ -31,8 +32,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock  Text="{Binding id}"  FontSize="{StaticResource TextStyleExtraLargeFontSize}"  Margin="5,0,05,0"/>
-                    <TextBlock Grid.Column="1" Text="{Binding name}" TextWrapping="WrapWholeWords" FontSize="{StaticResource TextStyleExtraLargeFontSize}"  />
-                        
+                        <TextBlock Grid.Column="1" Text="{Binding name}" TextWrapping="WrapWholeWords" FontSize="{StaticResource TextStyleExtraLargeFontSize}"  />
+
                     </Grid>
                 </Grid>
             </Grid>
@@ -60,6 +61,15 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <ListView x:Name="TopicsListView" ItemsSource="{Binding AllTopics}"  IsItemClickEnabled="True"  >
+                <ListView.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding key}" />
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListView.GroupStyle>
                 <ListView.ItemTemplate>
                     <StaticResource ResourceKey="TopicsDataTemplate"/>
                 </ListView.ItemTemplate>

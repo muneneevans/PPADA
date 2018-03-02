@@ -115,6 +115,15 @@ namespace ppada.Models
                 return new ObservableCollection<Topic>(dbconn.Table<Topic>().ToList<Topic>());
             }
         }
+
+        public ObservableCollection<Topic> GetSectionTopics(int sectionId)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNote = new ObservableCollection<Topic>(dbconn.Query<Topic>("select * from topic where sectionId =" + sectionId));
+                return foundNote;
+            }
+        }
         #endregion
 
         #region Annotation handlers
@@ -156,6 +165,45 @@ namespace ppada.Models
         }
         #endregion
 
+
+        #region Section handlers
+        public void createSection(Section newSection)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                dbconn.Insert(newSection);
+            }
+        }
+
+        public ObservableCollection<Section> GetAllSections()
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                return new ObservableCollection<Section>(dbconn.Table<Section>().ToList<Section>());
+            }
+        }
+
+        public Section GetSection(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundNote = dbconn.Query<Section>("SELECT * FROM Section WHERE id =" + id).FirstOrDefault();
+                return foundNote;
+            }
+        }
+
+        public void DeleteSection(int id)
+        {
+            using (var dbconn = new SQLiteConnection(DBPath))
+            {
+                var foundSection = dbconn.Query<Section>("SELECT * FROM Section WHERE id =" + id).FirstOrDefault();
+                if (foundSection != null)
+                {
+                    dbconn.Delete(foundSection);
+                }
+            }
+        }
+        #endregion
 
         #region News handlers
         public void createNews(News newNews)

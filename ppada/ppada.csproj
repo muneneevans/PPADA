@@ -92,6 +92,7 @@
     <Compile Include="Models\Annotation.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\Section.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsManager\Constants.cs" />
@@ -101,6 +102,8 @@
     <Compile Include="Models\DBHelper.cs" />
     <Compile Include="Models\routine.cs" />
     <Compile Include="TaskViewModels\DesignTimeViewModel.cs" />
+    <Compile Include="TaskViewModels\GroupedObservableCollection.cs" />
+    <Compile Include="TaskViewModels\Grouping.cs" />
     <Compile Include="TaskViewModels\ViewModel.cs" />
     <Compile Include="tile\TileManager.cs" />
     <Compile Include="tile\WideUserControl.xaml.cs">
@@ -261,8 +264,8 @@
     <SDKReference Include="Microsoft.VCLibs, version=12.0">
       <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
     </SDKReference>
-    <SDKReference Include="SQLite.WP81, Version=3.21.0">
-      <Name>SQLite for Windows Phone 8.1 %28SQLite.WP81, Version=3.21.0%29</Name>
+    <SDKReference Include="SQLite.WP81, Version=3.22.0">
+      <Name>SQLite for Windows Phone 8.1 %28SQLite.WP81, Version=3.22.0%29</Name>
     </SDKReference>
   </ItemGroup>
   <ItemGroup>

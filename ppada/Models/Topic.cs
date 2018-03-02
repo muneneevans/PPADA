@@ -45,6 +45,25 @@ namespace ppada.Models
         }
 
 
+        private int _sectionid;
+
+        public int sectionId
+        {
+            get
+            {
+                return _sectionid;
+            }
+            set
+            {
+                if (value != _sectionid)
+                {
+                    _sectionid = value;
+                    NotifyPropertyChanged("sectionId");
+                }
+            }
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged(String propertyName)
         {

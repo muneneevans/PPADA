@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ppada.Models;
-
+using ppada;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -13,6 +13,7 @@ using ppada.tile;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Windows.UI.Xaml.Data;
 
 namespace ppada.TaskViewModels
 {
@@ -24,11 +25,14 @@ namespace ppada.TaskViewModels
         private List<News> value;
 
         public ObservableCollection<Topic> AllTopics { get; set; }
+        GroupedObservableCollection<string, Topic> AllTopicGroups { get; set; }
         public ObservableCollection<Note> SearchNotes { get; set; }
         public ObservableCollection<Note> AllBookmarks { get; set; }
         public ObservableCollection<Annotation> AllAnnotations { get; set; }
         public ObservableCollection<routine> AllRoutines { get; set; }
         public ObservableCollection<News> AllNews { get; set; }
+
+        public ObservableCollection<Section> AllSections { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
@@ -58,7 +62,12 @@ namespace ppada.TaskViewModels
         {
             AllTopics = new ObservableCollection<Topic>();
             AllTopics = new ObservableCollection<Topic>(dbh.GetAllTopics());
-            NotifyPropertyChanged("AllTopics");
+            NotifyPropertyChanged("AllTopicGroups");
+
+            AllTopicGroups = new GroupedObservableCollection<string, Topic>(c => c.sectionId.ToString(), AllTopics.ToList());            
+            NotifyPropertyChanged("AllTopicGroups");
+
+
         }
         private void fetchAnnotations()
         {
@@ -72,23 +81,33 @@ namespace ppada.TaskViewModels
             AllBookmarks = new ObservableCollection<Note>(dbh.GetAllBookmarks());
             NotifyPropertyChanged("AllBookmarks");
         }
+
+        private void fetchSections()
+        {
+            AllSections = new ObservableCollection<Section>();
+            AllSections = new ObservableCollection<Section>(dbh.GetAllSections());
+            NotifyPropertyChanged("AllSections");
+
+        }
         private async void fetchNews()
         {
-            AllNews = new ObservableCollection<News>();
-            AllNews = new ObservableCollection<News>(dbh.GetAllNews());
-            NotifyPropertyChanged("AllNews");
+            try {
+                AllNews = new ObservableCollection<News>();
+                AllNews = new ObservableCollection<News>(dbh.GetAllNews());
+                NotifyPropertyChanged("AllNews");
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage Response = await client.GetAsync("https://zebaki.co.ke/Procurement/Waondo/pages/grtFeeds.php");
-            string result = await Response.Content.ReadAsStringAsync();
+                HttpClient client = new HttpClient();
+                HttpResponseMessage Response = await client.GetAsync("https://zebaki.co.ke/Procurement/Waondo/pages/grtFeeds.php");
+                string result = await Response.Content.ReadAsStringAsync();
 
-            var values = JsonConvert.DeserializeObject<Dictionary<string, List<News>>>(result);
-            if (values.TryGetValue("result", out value))
-            {
-                AllNews = new ObservableCollection<News>(value);
+                var values = JsonConvert.DeserializeObject<Dictionary<string, List<News>>>(result);
+                if (values.TryGetValue("result", out value))
+                {
+                    AllNews = new ObservableCollection<News>(value);
+                }
+                NotifyPropertyChanged("AllNews");
             }
-            NotifyPropertyChanged("AllNews");
-              
+            catch (Exception exp) { }
         }
 
         #endregion
